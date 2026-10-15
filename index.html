@@ -563,6 +563,84 @@ footer .logo b{font-size:1.3rem}
 .shake{animation:shake .45s}
 @keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
 body.locked{overflow:hidden}
+
+/* ===== Terms / charter ===== */
+.terms{z-index:110;align-items:center}
+.tcard{position:relative;z-index:2;width:min(820px,100%);max-height:calc(100dvh - 40px);display:flex;flex-direction:column;border-radius:30px;overflow:hidden;
+  background:linear-gradient(170deg,rgba(14,67,61,.8),rgba(4,32,28,.9));border:1px solid rgba(214,178,98,.4);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.08)}
+.thead{display:flex;align-items:center;gap:18px;padding:24px 28px 16px;border-bottom:1px solid var(--line-soft);
+  background:radial-gradient(420px 160px at 90% 0%,rgba(214,178,98,.2),transparent 70%)}
+.tcrest{width:64px;height:72px;flex:none;filter:drop-shadow(0 10px 22px rgba(214,178,98,.5))}
+.tkick{font-size:.78rem;color:var(--gold);letter-spacing:.02em}
+.thead h1{font-size:clamp(1.5rem,3.4vw,2.1rem);background:linear-gradient(180deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.thead p{color:var(--muted);font-size:.9rem}
+.tnav{display:flex;gap:6px;padding:10px 20px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line-soft)}
+.tnav a{flex:none;display:flex;align-items:center;gap:7px;padding:7px 12px;border-radius:12px;text-decoration:none;font-size:.85rem;color:var(--muted);border:1px solid transparent;transition:.2s}
+.tnav a .ico{color:var(--gold);font-size:1.05rem}
+.tnav a.on{color:var(--fg);background:rgba(214,178,98,.1);border-color:var(--line)}
+.tnav a.read .ico{color:var(--mint)}
+.tprog{height:3px;background:rgba(255,255,255,.06)}
+.tprog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--gold));transition:width .2s}
+.tbody{flex:1;overflow-y:auto;padding:8px 28px 20px;scroll-behavior:smooth;min-height:200px}
+.tbody:focus{outline:none}
+.thead,.tnav,.tprog,.tfoot{flex:none}
+.tsec{padding-top:22px}
+.tsec+.tsec{border-top:1px dashed var(--line-soft);margin-top:20px}
+.tsec h2{display:flex;align-items:center;gap:12px;font-size:1.35rem;color:var(--gold-2)}
+.tn{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:var(--gold);color:var(--gold-ink);font-size:1rem;flex:none}
+.tsec>p{color:var(--fg);opacity:.9;margin-top:10px;line-height:1.85}
+.tsec h3{font-size:1.05rem;margin-top:18px;color:var(--fg)}
+.tl{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.tl li{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:rgba(2,23,20,.45);border:1px solid var(--line-soft);line-height:1.7;font-size:.93rem}
+.tl li>.ico{font-size:1.3rem;color:var(--gold-2);margin-top:3px}
+.tl li b{display:block;color:var(--fg);font-size:.98rem}
+.tl li div{color:var(--muted)}
+.tl.sm li{padding:10px 12px}
+.tl.sm li>.ico{color:var(--mint);font-size:1.1rem}
+.tl.sm li b{display:inline;color:var(--fg)}
+.tscroll{overflow-x:auto;margin-top:14px;border-radius:16px;border:1px solid var(--line)}
+.tt{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px}
+.tt th{background:rgba(214,178,98,.14);color:var(--gold-2);text-align:start;padding:10px 12px;font-weight:600}
+.tt td{padding:12px;border-top:1px solid var(--line-soft);vertical-align:top;line-height:1.7;color:var(--fg)}
+.tt td:first-child{white-space:nowrap;color:var(--gold-2)}
+.tt td:last-child{white-space:nowrap}
+.pen{display:block;font-weight:600;font-size:.84rem}
+.pen:first-child{color:#FFB4AA}
+.pen+.pen{color:var(--gold-2)}
+.tnote{display:flex;gap:8px;align-items:flex-start;margin-top:12px;padding:10px 12px;border-radius:12px;font-size:.85rem;line-height:1.7;background:rgba(240,122,110,.08);border:1px solid rgba(240,122,110,.3);color:var(--fg)}
+.tnote .ico{color:var(--danger);margin-top:4px;flex:none}
+.tnote.ok{background:rgba(70,214,163,.08);border-color:rgba(70,214,163,.3)}
+.tnote.ok .ico{color:var(--mint)}
+.rights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+@media (max-width:640px){.rights{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.rights div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:14px 10px;border-radius:16px;background:rgba(2,23,20,.45);border:1px solid var(--line-soft)}
+.rights .ico{font-size:26px;color:var(--gold-2)}
+.rights b{font-size:.95rem}
+.rights span{font-size:.78rem;color:var(--muted);line-height:1.5}
+.pledge{margin-top:14px;padding:18px 20px;border-radius:18px;border:1px solid var(--gold);background:radial-gradient(300px 140px at 90% 0%,rgba(214,178,98,.16),transparent),rgba(2,23,20,.45)}
+.pledge p{font-family:var(--f-display);font-size:1.1rem;color:var(--gold-2)}
+.pledge ol{margin:8px 0 0;padding-inline-start:22px;line-height:2;color:var(--fg)}
+.tend{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;color:var(--mint);font-size:.88rem;opacity:.0;transition:opacity .4s}
+.tend.on{opacity:1}
+.tfoot{padding:16px 28px 22px;border-top:1px solid var(--line);background:rgba(2,23,20,.55);display:grid;gap:10px}
+.thint{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--gold-2)}
+.thint.done{color:var(--mint)}
+.tchk{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;line-height:1.6;cursor:pointer}
+.tchk input{position:absolute;opacity:0}
+.tchk .cb{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--line);display:grid;place-items:center;font-size:13px;color:transparent;flex:none;margin-top:2px;transition:.2s}
+.tchk input:checked+.cb{background:var(--gold);border-color:var(--gold);color:var(--gold-ink)}
+.tchk input:focus-visible+.cb{outline:2px solid var(--gold-2);outline-offset:2px}
+.tchk input:disabled+.cb{opacity:.4}
+.tchk:has(input:disabled){cursor:not-allowed;color:var(--muted)}
+.tbtns{display:flex;gap:10px;margin-top:4px}
+.tno{flex:0 0 auto;padding:0 22px;height:54px;border-radius:16px;border:1px solid var(--line-soft);background:none;color:var(--muted);font-weight:600}
+.tno:hover{color:var(--fg);border-color:var(--line)}
+.tyes{margin-top:0;flex:1}
+.tyes:disabled{filter:grayscale(.6);opacity:.55;cursor:not-allowed;box-shadow:none}
+.tyes:disabled::after{display:none}
+@media (max-width:560px){.thead{padding:18px}.tcrest{width:48px;height:54px}.tbody{padding:4px 18px 16px}.tfoot{padding:14px 18px 18px}.tno{padding:0 14px}}
+.fterms{background:none;border:none;color:var(--gold-2);text-decoration:underline;text-underline-offset:4px;padding:0;font-size:.85rem}
 </style>
 
 </head>
@@ -641,6 +719,107 @@ body.locked{overflow:hidden}
 </defs>
 </svg>
 
+<div class="login terms" id="terms" role="dialog" aria-modal="true" aria-labelledby="tTitle" hidden>
+  <div class="aur a1"></div><div class="aur a2"></div><div class="aur a3"></div>
+  <div class="lg-grid" aria-hidden="true"></div>
+  <div class="tcard">
+    <header class="thead">
+      <svg class="tcrest" viewBox="0 0 120 136" aria-hidden="true"><use href="#crest"/></svg>
+      <div><span class="tkick">منصة وسام · وعي سعودي أخلاقي مدني</span><h1 id="tTitle">ميثاق الاستخدام الرقمي</h1><p>قبل أن تبدأ، اقرأ هذا الميثاق ووافق عليه. هو أساس رحلتك معنا.</p></div>
+    </header>
+    <nav class="tnav" aria-label="أقسام الميثاق">
+      <a href="#t1" data-t="t1"><svg class="ico"><use href="#i-handshake"/></svg><span>الأخلاقيات</span></a>
+      <a href="#t2" data-t="t2"><svg class="ico"><use href="#i-alert"/></svg><span>الجرائم المعلوماتية</span></a>
+      <a href="#t3" data-t="t3"><svg class="ico"><use href="#i-lock"/></svg><span>البيانات الشخصية</span></a>
+      <a href="#t4" data-t="t4"><svg class="ico"><use href="#i-spark"/></svg><span>المساعد الذكي</span></a>
+      <a href="#t5" data-t="t5"><svg class="ico"><use href="#i-check"/></svg><span>تعهّدي</span></a>
+    </nav>
+    <div class="tprog"><i id="tProg"></i></div>
+    <div class="tbody" id="tBody" tabindex="0">
+      <section class="tsec" id="t1">
+        <h2><span class="tn">١</span>أخلاقيات التعامل مع العالم الرقمي</h2>
+        <p>العالم الرقمي امتداد لحياتنا الحقيقية، وما لا نقبله في الواقع لا نقبله خلف الشاشة.</p>
+        <ul class="tl">
+          <li><svg class="ico"><use href="#i-users"/></svg><div><b>الاحترام</b>أتعامل مع الآخرين باحترام، ولا أسيء أو أسخر أو أتنمّر على أحد.</div></li>
+          <li><svg class="ico"><use href="#i-news"/></svg><div><b>التحقق قبل النشر</b>لا أنشر خبراً أو مقطعاً قبل التأكد من مصدره الرسمي، ولا أشارك في نشر الشائعات.</div></li>
+          <li><svg class="ico"><use href="#i-eyeoff"/></svg><div><b>احترام الخصوصية</b>لا أصوّر أحداً ولا أنشر صوره أو معلوماته أو محادثاته دون إذنه.</div></li>
+          <li><svg class="ico"><use href="#i-medal"/></svg><div><b>الأمانة الرقمية</b>أحترم حقوق الملكية الفكرية، وأنسب المحتوى لأصحابه، ولا أنتحل شخصية غيري.</div></li>
+          <li><svg class="ico"><use href="#i-shield"/></svg><div><b>المسؤولية</b>أمثّل قيمي ومجتمعي في كل ما أكتبه وأنشره، وأبلّغ عن المحتوى الضار بدل نشره.</div></li>
+        </ul>
+      </section>
+
+      <section class="tsec" id="t2">
+        <h2><span class="tn">٢</span>الجرائم المعلوماتية وعقوباتها</h2>
+        <p>يجرّم <b>نظام مكافحة جرائم المعلوماتية</b> في المملكة العربية السعودية (الصادر بالمرسوم الملكي رقم م/17 بتاريخ 8/3/1428هـ) أفعالاً كثيرة قد يستهين بها البعض. هذه أبرزها:</p>
+        <div class="tscroll"><table class="tt">
+          <thead><tr><th>المادة</th><th>من الأفعال المجرّمة</th><th>العقوبة القصوى</th></tr></thead>
+          <tbody>
+            <tr><td><b>الثالثة</b></td><td>التنصّت على البيانات، الابتزاز والتهديد، المساس بالحياة الخاصة بإساءة استخدام كاميرا الجوال، التشهير بالآخرين وإلحاق الضرر بهم</td><td><span class="pen">سجن حتى سنة</span><span class="pen">غرامة حتى 500,000 ريال</span></td></tr>
+            <tr><td><b>الرابعة</b></td><td>الاحتيال للاستيلاء على أموال أو سندات، والوصول دون حق إلى بيانات بنكية أو ائتمانية</td><td><span class="pen">سجن حتى 3 سنوات</span><span class="pen">غرامة حتى 2,000,000 ريال</span></td></tr>
+            <tr><td><b>الخامسة</b></td><td>حذف البيانات أو تسريبها أو إتلافها دون حق، وتعطيل الشبكات والأنظمة والخدمات</td><td><span class="pen">سجن حتى 4 سنوات</span><span class="pen">غرامة حتى 3,000,000 ريال</span></td></tr>
+            <tr><td><b>السادسة</b></td><td>إنتاج أو نشر ما يمس النظام العام أو القيم الدينية أو الآداب العامة أو حرمة الحياة الخاصة</td><td><span class="pen">سجن حتى 5 سنوات</span><span class="pen">غرامة حتى 3,000,000 ريال</span></td></tr>
+            <tr><td><b>السابعة</b></td><td>إنشاء مواقع للمنظمات الإرهابية أو الترويج لها، والوصول إلى بيانات تمس الأمن الوطني أو الاقتصاد الوطني</td><td><span class="pen">سجن حتى 10 سنوات</span><span class="pen">غرامة حتى 5,000,000 ريال</span></td></tr>
+          </tbody>
+        </table></div>
+        <p class="tnote"><svg class="ico"><use href="#i-alert"/></svg>العقوبة قد تكون السجن أو الغرامة أو كليهما. ويعاقب النظام أيضاً من حرّض على الجريمة أو ساعد عليها أو شرع فيها. هذا ملخص توعوي وليس استشارة قانونية.</p>
+        <p class="tnote ok"><svg class="ico"><use href="#i-flag"/></svg>للإبلاغ عن جريمة معلوماتية استخدم تطبيق <b>«كلنا أمن»</b>.</p>
+      </section>
+
+      <section class="tsec" id="t3">
+        <h2><span class="tn">٣</span>حماية البيانات الشخصية</h2>
+        <p>ينظّم <b>نظام حماية البيانات الشخصية</b> في المملكة جمع البيانات واستخدامها، وتشرف عليه الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا). ومن حقوقك:</p>
+        <div class="rights">
+          <div><svg class="ico"><use href="#i-bulb"/></svg><b>حق العلم</b><span>أن تعرف لماذا تُجمع بياناتك وكيف تُستخدم</span></div>
+          <div><svg class="ico"><use href="#i-eye"/></svg><b>حق الوصول</b><span>أن تطّلع على بياناتك وتحصل على نسخة منها</span></div>
+          <div><svg class="ico"><use href="#i-refresh"/></svg><b>حق التصحيح</b><span>أن تطلب تصحيح أي بيانات غير دقيقة</span></div>
+          <div><svg class="ico"><use href="#i-x"/></svg><b>حق الإتلاف</b><span>أن تطلب حذف بياناتك عند انتهاء الحاجة إليها</span></div>
+        </div>
+        <h3>كيف تتعامل منصة وسام مع بياناتك؟</h3>
+        <ul class="tl sm">
+          <li><svg class="ico"><use href="#i-check"/></svg><div>تقدّمك في الدروس والاختبارات يُحفظ <b>في متصفحك فقط</b> على جهازك، ولا يُرسل لأي جهة.</div></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><div>أدوات فحص الروابط وكلمات المرور تعمل <b>داخل جهازك</b> ولا ترسل ما تكتبه.</div></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><div>الأسئلة التي تكتبها للمساعد الذكي تُرسل إلى خدمة الذكاء الاصطناعي لتوليد الإجابة فقط.</div></li>
+        </ul>
+      </section>
+
+      <section class="tsec" id="t4">
+        <h2><span class="tn">٤</span>استخدام المساعد الذكي</h2>
+        <ul class="tl">
+          <li><svg class="ico"><use href="#i-lock"/></svg><div><b>لا تشارك أسرارك</b>لا تكتب كلمات المرور أو رموز التحقق أو أرقام البطاقات أو الهوية في المحادثة.</div></li>
+          <li><svg class="ico"><use href="#i-search"/></svg><div><b>تحقّق دائماً</b>المساعد قد يخطئ أحياناً، فارجع للمصادر الرسمية في الأمور المهمة.</div></li>
+          <li><svg class="ico"><use href="#i-building"/></svg><div><b>ليس بديلاً عن المختص</b>إجاباته توعوية، وليست استشارة قانونية أو طبية أو مالية.</div></li>
+          <li><svg class="ico"><use href="#i-handshake"/></svg><div><b>استخدام مسؤول</b>لا أستخدم المساعد في الإساءة للآخرين أو لأي غرض مخالف للأنظمة.</div></li>
+        </ul>
+      </section>
+
+      <section class="tsec" id="t5">
+        <h2><span class="tn">٥</span>تعهّدي كمستخدم</h2>
+        <div class="pledge">
+          <p>أتعهّد بأن أكون مواطناً رقمياً مسؤولاً:</p>
+          <ol>
+            <li>أستخدم الإنترنت بما يرضي الله ثم ضميري ويخدم وطني ومجتمعي.</li>
+            <li>أحمي بياناتي وبيانات غيري، ولا أعتدي على خصوصية أحد.</li>
+            <li>أتحقّق قبل أن أنشر، وأفكّر قبل أن أضغط.</li>
+            <li>أبلّغ عن أي جريمة أو محتوى ضار عبر القنوات الرسمية.</li>
+            <li>ألتزم بأنظمة المملكة العربية السعودية في كل تعاملاتي الرقمية.</li>
+          </ol>
+        </div>
+        <p class="tend" id="tEnd"><svg class="ico"><use href="#i-check"/></svg> وصلت إلى نهاية الميثاق</p>
+      </section>
+    </div>
+
+    <footer class="tfoot">
+      <p class="thint" id="tHint"><svg class="ico"><use href="#i-book"/></svg> اقرأ الميثاق حتى النهاية لتفعيل الموافقة</p>
+      <label class="tchk" for="tc1"><input type="checkbox" id="tc1" disabled><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>قرأت ميثاق الاستخدام الرقمي وفهمت ما فيه، بما في ذلك الجرائم المعلوماتية وعقوباتها.</label>
+      <label class="tchk" for="tc2"><input type="checkbox" id="tc2" disabled><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>أوافق على شروط الاستخدام وأتعهّد بالالتزام بأخلاقيات التعامل الرقمي.</label>
+      <p class="lerr" id="tErr" role="alert" hidden></p>
+      <div class="tbtns">
+        <button type="button" class="tno" id="tNo">لا أوافق</button>
+        <button type="button" class="lbtn tyes" id="tYes" disabled><span>أوافق وأتابع</span><svg class="ico flip"><use href="#i-send"/></svg></button>
+      </div>
+    </footer>
+  </div>
+</div>
 <div class="login" id="login" role="dialog" aria-modal="true" aria-labelledby="lgTitle">
   <div class="aur a1"></div><div class="aur a2"></div><div class="aur a3"></div>
   <canvas class="lgnet" id="lgNet" aria-hidden="true"></canvas>
@@ -1069,7 +1248,7 @@ body.locked{overflow:hidden}
 <footer class="g">
   <div class="wrap">
     <a class="logo" href="#home"><svg class="crest" style="width:34px;height:40px" aria-hidden="true"><use href="#crest"/></svg><span><b>وسام</b><small>وعي سعودي أخلاقي مدني</small></span></a>
-    <span>معاً نحو مجتمع رقمي واعٍ وآمن ومستدام · دعماً لمستهدفات رؤية المملكة ٢٠٣٠</span>
+    <span>معاً نحو مجتمع رقمي واعٍ وآمن ومستدام · دعماً لمستهدفات رؤية المملكة ٢٠٣٠ · <button type="button" class="fterms" id="fTerms">ميثاق الاستخدام الرقمي</button></span>
   </div>
 </footer>
 
@@ -1143,7 +1322,7 @@ let authed=false;try{authed=localStorage.getItem("wisam-auth")===USER||sessionSt
 function showLogin(){const L=$("#login");L.hidden=false;L.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{$("#lgUser").focus();loginNet.size();},50);}
 function enter(){const L=$("#login");L.classList.add("out");document.body.classList.remove("locked");setTimeout(()=>{L.hidden=true},650);
   $("#uName").textContent=USER;$("#uAv").textContent=USER[0];}
-if(authed){$("#login").hidden=true;$("#uName").textContent=USER;$("#uAv").textContent=USER[0];}else showLogin();
+if(authed){$("#login").hidden=true;$("#uName").textContent=USER;$("#uAv").textContent=USER[0];}
 $("#lgEye").onclick=()=>{const p=$("#lgPass"),sh=p.type==="password";p.type=sh?"text":"password";$("#lgEye").innerHTML=ic(sh?"eyeoff":"eye");$("#lgEye").setAttribute("aria-label",sh?"إخفاء كلمة المرور":"إظهار كلمة المرور");};
 $("#lgForm").addEventListener("submit",e=>{e.preventDefault();const u=norm($("#lgUser").value),p=toLatin($("#lgPass").value),err=$("#lgErr"),card=$("#lgForm");
   if(!u||!p){err.textContent="اكتب اسم المستخدم وكلمة المرور.";err.hidden=false;return;}
@@ -1154,6 +1333,27 @@ $("#lgForm").addEventListener("submit",e=>{e.preventDefault();const u=norm($("#l
   else{err.textContent="اسم المستخدم أو كلمة المرور غير صحيحة. حاول مرة أخرى.";err.hidden=false;card.classList.remove("shake");void card.offsetWidth;card.classList.add("shake");$("#lgPass").value="";$("#lgPass").focus();}});
 $("#logout").onclick=()=>{try{localStorage.removeItem("wisam-auth");sessionStorage.removeItem("wisam-auth")}catch(e){}$("#lgPass").value="";showLogin();};
 
+
+/* ---------- Charter / terms ---------- */
+const TERMS_V="wisam-terms-v1";
+let termsOK=false;try{termsOK=localStorage.getItem(TERMS_V)==="yes"}catch(e){}
+const tBody=$("#tBody"),tc1=$("#tc1"),tc2=$("#tc2"),tYes=$("#tYes");
+function tUpdate(){tYes.disabled=!(tc1.checked&&tc2.checked);if(!tYes.disabled)$("#tErr").hidden=true;}
+function tScroll(){const max=tBody.scrollHeight-tBody.clientHeight;const p=max<=0?1:tBody.scrollTop/max;$("#tProg").style.width=Math.round(p*100)+"%";
+  let cur="t1";document.querySelectorAll(".tsec").forEach(sec=>{if(sec.offsetTop-tBody.offsetTop-80<=tBody.scrollTop)cur=sec.id;});
+  document.querySelectorAll(".tnav a").forEach(a=>{a.classList.toggle("on",a.dataset.t===cur);const s=$("#"+a.dataset.t);if(s.offsetTop-tBody.offsetTop<=tBody.scrollTop+tBody.clientHeight-60)a.classList.add("read");});
+  if(p>.97&&tc1.disabled){tc1.disabled=false;tc2.disabled=false;$("#tEnd").classList.add("on");const h=$("#tHint");h.classList.add("done");h.innerHTML=ic("check")+" أحسنت، قرأت الميثاق كاملاً. وافق الآن للمتابعة";}}
+tBody.addEventListener("scroll",tScroll,{passive:true});
+document.querySelectorAll(".tnav a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();const s=$("#"+a.dataset.t);tBody.scrollTo({top:s.offsetTop-tBody.offsetTop-6,behavior:"smooth"});}));
+tc1.addEventListener("change",tUpdate);tc2.addEventListener("change",tUpdate);
+$("#tNo").onclick=()=>{const e=$("#tErr");e.textContent="لا يمكن استخدام منصة وسام دون الموافقة على ميثاق الاستخدام الرقمي.";e.hidden=false;const c=$(".tcard");c.classList.remove("shake");void c.offsetWidth;c.classList.add("shake");};
+function showTerms(){const T=$("#terms");T.hidden=false;T.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{tBody.focus();tScroll();},60);}
+tYes.onclick=()=>{if(tYes.disabled)return;try{localStorage.setItem(TERMS_V,"yes")}catch(e){}termsOK=true;
+  const T=$("#terms");T.classList.add("out");setTimeout(()=>{T.hidden=true;},600);
+  if(!authed)showLogin();else{document.body.classList.remove("locked");}};
+
+if(!termsOK){$("#login").hidden=true;showTerms();}else if(!authed)showLogin();
+$("#fTerms").onclick=()=>showTerms();
 /* ---------- Phone clock ---------- */
 function clock(){const d=new Date();$("#phTime").textContent=d.getHours()+":"+String(d.getMinutes()).padStart(2,"0");}clock();setInterval(clock,30000);
 
