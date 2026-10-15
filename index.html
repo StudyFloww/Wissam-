@@ -429,6 +429,140 @@ footer .logo b{font-size:1.3rem}
 .sleft .b{font-size:.98rem}
 .sleft .ph-head b{font-size:1.3rem}
 .sleft .comp textarea{font-size:1rem}
+
+/* ===== Views ===== */
+.view{display:none;animation:vin .45s ease both}
+.view.on{display:block}
+@keyframes vin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.phero{padding-block:34px 4px}
+.phin{display:flex;align-items:center;gap:20px;padding:26px 28px;border-radius:26px;border:1px solid var(--line);position:relative;overflow:hidden;
+  background:radial-gradient(500px 220px at 85% 0%,rgba(214,178,98,.2),transparent 70%),radial-gradient(400px 200px at 10% 100%,rgba(70,214,163,.18),transparent 70%),linear-gradient(120deg,#0E4A43,#06302B)}
+.phic{width:76px;height:76px;border-radius:24px;flex:none;display:grid;place-items:center;font-size:36px;color:var(--gold-ink);background:linear-gradient(140deg,var(--gold-2),var(--gold) 55%,var(--gold-3));box-shadow:0 14px 30px -12px var(--gold)}
+.crumb{display:flex;gap:8px;font-size:.82rem;color:var(--muted)}
+.crumb a{text-decoration:none}.crumb a:hover{color:var(--gold-2)}
+.crumb b{color:var(--gold-2);font-weight:600}
+.phin h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-top:2px}
+.phin p{color:var(--muted);margin-top:4px;max-width:60ch}
+@media (max-width:560px){.phin{flex-direction:column;align-items:flex-start;padding:22px}.phic{width:60px;height:60px;font-size:28px}}
+.links a.on{color:var(--fg);background:rgba(214,178,98,.1);border-bottom-color:var(--gold)}
+.user .av{font-family:var(--f-display);font-weight:700;font-size:1.15rem}
+/* programs page */
+.pcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.pcard{background:linear-gradient(170deg,var(--panel-2),var(--panel));border:1px solid var(--line-soft);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.25s}
+.pcard:hover{border-color:var(--line);transform:translateY(-4px)}
+.pci{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:30px;color:var(--gold-2);border:1.5px solid var(--gold);background:radial-gradient(circle at 50% 30%,rgba(214,178,98,.2),transparent)}
+.pcard h3{font-size:1.15rem}
+.pcard p{color:var(--muted);font-size:.9rem;line-height:1.65}
+.pcard ul{margin:0;padding-inline-start:18px;font-size:.86rem;line-height:1.8;color:var(--fg)}
+.lightbox{margin-top:22px;background:linear-gradient(180deg,#F2F7F5,#E6EFEB);border-radius:26px;padding:16px;color:var(--ink)}
+/* AI page */
+.aig{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px) minmax(0,1fr);gap:24px;align-items:center}
+.aig>*{min-width:0}
+@media (max-width:1000px){.aig{grid-template-columns:1fr}.aig .pslot{order:-1}}
+.aicol{display:grid;gap:14px}
+.sugg{display:grid;gap:8px;margin-top:12px}
+.sugg button{text-align:start;border:1px solid var(--line-soft);background:rgba(2,23,20,.45);border-radius:14px;padding:10px 14px;font-size:.9rem;transition:.2s;display:flex;gap:8px;align-items:center}
+.sugg button:hover{border-color:var(--gold);color:var(--gold-2)}
+.sugg .ico{color:var(--gold)}
+.pslot{display:flex;justify-content:center;width:100%}
+/* ===== Phone v2 ===== */
+.phone2{position:relative;width:100%;max-width:360px;border-radius:56px;padding:12px;
+  background:linear-gradient(150deg,#5E6E66 0%,#1A2724 14%,#0A1513 50%,#1A2724 86%,#4C5D55 100%);
+  box-shadow:inset 0 0 0 1.5px rgba(243,219,154,.55),inset 0 0 0 4px #0A1513,0 0 0 1px rgba(0,0,0,.6),0 50px 90px -35px rgba(0,0,0,.95),0 0 90px -25px rgba(70,214,163,.45)}
+.sbtn{position:absolute;width:4px;border-radius:3px;background:linear-gradient(90deg,#2B3A35,#6B7B72)}
+.sbtn.s1{right:-3px;top:150px;height:70px}
+.sbtn.s2{left:-3px;top:110px;height:30px}.sbtn.s3{left:-3px;top:160px;height:56px}.sbtn.s4{left:-3px;top:228px;height:56px}
+.screen2{position:relative;border-radius:45px;overflow:hidden;display:flex;flex-direction:column;height:720px;
+  background:radial-gradient(380px 300px at 80% -5%,rgba(70,214,163,.28),transparent 65%),radial-gradient(300px 260px at 0% 100%,rgba(214,178,98,.14),transparent 70%),linear-gradient(180deg,#073530,#03201D)}
+.pslot.big .phone2{max-width:400px}
+.pslot.big .screen2{height:min(760px,80vh);min-height:600px}
+.sbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px 26px 6px;font-size:.8rem;font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
+.sbar .tm{direction:ltr;text-align:right}
+.island{width:108px;height:30px;border-radius:20px;background:#000;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+.sic{display:flex;gap:5px;align-items:center;justify-content:flex-start;direction:ltr}
+.sic svg{height:11px;width:auto;fill:#fff}
+.ph-head2{display:flex;align-items:center;gap:10px;padding:10px 18px 12px}
+.pav{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:rgba(214,178,98,.1);border:1px solid var(--line)}
+.pav svg{width:30px;height:34px}
+.ph-head2 b{font-family:var(--f-display);font-size:1.35rem;color:var(--gold-2);line-height:1.1;display:block}
+.ph-head2 span{display:flex;align-items:center;gap:6px;font-size:.74rem;color:var(--mint)}
+.ph-head2 span i{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 3px rgba(70,214,163,.2);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(70,214,163,0)}}
+.ph-head2 button{margin-inline-start:auto;width:38px;height:38px;border-radius:13px;border:1px solid var(--line-soft);background:rgba(255,255,255,.04);display:grid;place-items:center;color:var(--muted)}
+.ph-score2{margin:0 14px;padding:14px 16px;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:linear-gradient(120deg,rgba(31,163,110,.35),rgba(10,63,57,.6));border:1px solid rgba(123,240,200,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.psl small{display:block;font-size:.74rem;color:var(--muted)}
+.psl b{display:block;font-family:var(--f-display);color:var(--mint);font-size:1.1rem;line-height:1.3}
+.psl span{font-size:.75rem;color:var(--muted)}
+.psl em{font-style:normal;font-family:var(--f-display);font-size:1.6rem;color:#fff;font-variant-numeric:tabular-nums}
+.pring{width:58px;height:58px;flex:none}
+#phRing{transition:stroke-dasharray .6s}
+.screen2 .log{padding:14px 14px 6px}
+.screen2 .b{font-size:.96rem}
+.screen2 .b.bot{background:rgba(14,67,61,.85);backdrop-filter:blur(6px)}
+.screen2 .pchips{padding:6px 14px 0}
+.screen2 .comp{padding:10px 14px 8px}
+.screen2 .comp textarea{background:rgba(2,23,20,.7);border-radius:18px}
+.screen2 .send{border-radius:16px}
+.ptabs{display:grid;grid-template-columns:repeat(5,1fr);align-items:end;padding:8px 10px 6px;border-top:1px solid var(--line-soft);background:rgba(2,23,20,.55);backdrop-filter:blur(10px)}
+.ptabs a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.66rem;color:var(--muted);text-decoration:none;padding:2px 0}
+.ptabs a .ico{font-size:1.25rem}
+.ptabs a.on{color:var(--gold-2)}
+.ptabs a.mid span{width:46px;height:46px;margin-top:-22px;border-radius:16px;display:grid;place-items:center;font-size:1.35rem;color:var(--gold-ink);background:linear-gradient(140deg,var(--gold-2),var(--gold));box-shadow:0 10px 20px -8px var(--gold)}
+.homebar{display:block;width:120px;height:5px;border-radius:5px;background:rgba(255,255,255,.55);margin:4px auto 8px}
+/* ===== Login ===== */
+.login{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:auto;padding:24px max(16px,env(safe-area-inset-left,0px));
+  background:radial-gradient(900px 600px at 50% 110%,#0E5A50 0%,transparent 60%),linear-gradient(180deg,#010F0D,#03201D 60%,#052A26);transition:opacity .6s,transform .6s}
+.login.out{opacity:0;transform:scale(1.04);pointer-events:none}
+.aur{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 16s ease-in-out infinite alternate}
+.aur.a1{width:520px;height:520px;background:#1FA36E;top:-160px;right:-120px}
+.aur.a2{width:440px;height:440px;background:#D6B262;bottom:-140px;left:-120px;opacity:.32;animation-duration:20s}
+.aur.a3{width:360px;height:360px;background:#0E8C83;top:40%;left:40%;opacity:.3;animation-duration:24s}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.12)}}
+.lgnet{position:absolute;inset:0;width:100%;height:100%}
+.lg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(214,178,98,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(214,178,98,.06) 1px,transparent 1px);background-size:48px 48px;
+  mask:radial-gradient(ellipse at 50% 50%,#000 20%,transparent 70%);-webkit-mask:radial-gradient(ellipse at 50% 50%,#000 20%,transparent 70%)}
+.floaters span{position:absolute;width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:24px;color:var(--gold-2);
+  background:rgba(10,54,49,.45);border:1px solid var(--line);backdrop-filter:blur(6px);animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-16px) rotate(4deg)}}
+@media (max-width:700px){.floaters{display:none}}
+.lg-sky{position:absolute;bottom:0;left:0;width:100%;height:auto;max-height:200px;opacity:.6}
+.lcard{position:relative;z-index:2;width:min(420px,100%);padding:34px 30px 26px;border-radius:30px;text-align:center;
+  background:linear-gradient(170deg,rgba(14,67,61,.72),rgba(4,32,28,.82));border:1px solid rgba(214,178,98,.4);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.08)}
+.lcard::before{content:"";position:absolute;inset:-1px;border-radius:30px;padding:1px;background:linear-gradient(140deg,var(--gold-2),transparent 35%,transparent 65%,var(--mint));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.lcrest{position:relative;width:110px;height:118px;margin:0 auto}
+.lcrest svg{position:relative;width:96px;height:auto;margin-top:6px;filter:drop-shadow(0 12px 30px rgba(214,178,98,.55))}
+.lcrest .ring{position:absolute;inset:-6px;border-radius:50%;border:1px dashed rgba(214,178,98,.45);animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lword{font-size:3.4rem;line-height:1;margin-top:6px;background:linear-gradient(180deg,var(--gold-2),var(--gold) 60%,var(--gold-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ltag{font-family:var(--f-display);color:var(--fg);opacity:.85;margin-top:4px}
+.lcard h2{font-size:1.35rem;margin-top:20px}
+.lsub{color:var(--muted);font-size:.86rem;margin-top:4px}
+.lf{display:flex;align-items:center;gap:10px;margin-top:14px;padding:0 14px;height:54px;border-radius:16px;background:rgba(2,23,20,.6);border:1px solid var(--line-soft);transition:.2s;text-align:start}
+.lf:focus-within{border-color:var(--gold);box-shadow:0 0 0 4px rgba(214,178,98,.12)}
+.lic{color:var(--gold-2);font-size:1.2rem;display:grid}
+.lf input{flex:1;min-width:0;height:100%;background:none;border:none;color:var(--fg);font:inherit;font-size:1.02rem;outline:none}
+.lf input::placeholder{color:var(--muted)}
+.eye{background:none;border:none;color:var(--muted);font-size:1.15rem;display:grid;padding:4px}
+.lrow{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:.85rem}
+.rem{display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--fg)}
+.rem input{position:absolute;opacity:0}
+.rem .cb{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);display:grid;place-items:center;font-size:12px;color:transparent}
+.rem input:checked+.cb{background:var(--gold);border-color:var(--gold);color:var(--gold-ink)}
+.rem input:focus-visible+.cb{outline:2px solid var(--gold-2);outline-offset:2px}
+.lsec{display:flex;gap:6px;align-items:center;color:var(--mint)}
+.lerr{margin-top:12px;padding:10px 12px;border-radius:12px;font-size:.88rem;background:rgba(240,122,110,.12);border:1px solid rgba(240,122,110,.4);color:#FFC9C2}
+.lbtn{width:100%;height:54px;margin-top:18px;border:none;border-radius:16px;font-weight:700;font-size:1.08rem;display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold-ink);
+  background:linear-gradient(140deg,var(--gold-2),var(--gold) 55%,var(--gold-3));box-shadow:0 18px 36px -14px var(--gold);position:relative;overflow:hidden}
+.lbtn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s infinite}
+@keyframes shine{60%,100%{transform:translateX(120%)}}
+.lbtn:disabled{opacity:.7}
+.lfoot{margin-top:16px;font-size:.78rem;color:var(--muted)}
+.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+body.locked{overflow:hidden}
 </style>
 
 </head>
@@ -501,35 +635,69 @@ footer .logo b{font-size:1.3rem}
   <symbol id="i-youth" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M8 5.5c2 1 6 1 8 0"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></symbol>
   <symbol id="i-medal" viewBox="0 0 24 24"><circle cx="12" cy="15" r="6"/><path d="M8.5 10.2L5 3h4l3 6M15.5 10.2L19 3h-4l-3 6"/><path d="M12 12.5l.8 1.7 1.8.2-1.3 1.2.4 1.8-1.7-.9-1.7.9.4-1.8-1.3-1.2 1.8-.2z"/></symbol>
   <symbol id="i-fp" viewBox="0 0 24 24"><path d="M6.5 8a7 7 0 0 1 11.6 1.5"/><path d="M5 13c0-1 .1-2 .5-3"/><path d="M8.5 19.5A10 10 0 0 0 9 13a3 3 0 0 1 6 0c0 2.5-.3 4.7-1 6.6"/><path d="M12 13c0 3-.5 5.5-1.6 7.5"/><path d="M18.5 13v.5c0 2-.3 3.8-.8 5.4"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M10 8l-4 4 4 4M6 12h10"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5.2 12.5a10.5 10.5 0 0 1 13.6 0"/><path d="M8.5 16a5.5 5.5 0 0 1 7 0"/><path d="M12 19.6v.01"/></symbol>
   <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
 </defs>
 </svg>
 
+<div class="login" id="login" role="dialog" aria-modal="true" aria-labelledby="lgTitle">
+  <div class="aur a1"></div><div class="aur a2"></div><div class="aur a3"></div>
+  <canvas class="lgnet" id="lgNet" aria-hidden="true"></canvas>
+  <div class="lg-grid" aria-hidden="true"></div>
+  <div class="floaters" aria-hidden="true">
+    <span style="top:14%;right:10%"><svg class="ico"><use href="#i-lock"/></svg></span>
+    <span style="top:24%;left:9%;animation-delay:-2s"><svg class="ico"><use href="#i-shield"/></svg></span>
+    <span style="top:62%;right:7%;animation-delay:-4s"><svg class="ico"><use href="#i-fp"/></svg></span>
+    <span style="top:70%;left:12%;animation-delay:-1s"><svg class="ico"><use href="#i-key"/></svg></span>
+    <span style="top:40%;right:22%;animation-delay:-3s"><svg class="ico"><use href="#i-wifi"/></svg></span>
+    <span style="top:46%;left:24%;animation-delay:-5s"><svg class="ico"><use href="#i-eye"/></svg></span>
+  </div>
+  <svg class="lg-sky" viewBox="0 0 1200 210" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path fill="url(#skyG)" d="M0 210V150h40v-30h30v40h25v-60h35v70h20v-40h30v-25h20v65h30V95h12V70h6v25h12v65h40v-50h28v60h25v-90h10l8-30 8 30h10v90h30v-40h35v-20h25v60h20V40c0-12 8-24 18-34 10 10 18 22 18 34v90h-6c0-14-6-26-12-34-6 8-12 20-12 34h-6v30h30v-70h40v80h25v-50h30v60h35V80h30v90h20v-60h40v50h30v-30h25v70h30v-80h20l10-25 10 25h20v80h40v-40h30v60h30v-50h35v50h40v30z"/>
+  </svg>
+  <form class="lcard" id="lgForm" autocomplete="off">
+    <div class="lcrest"><span class="ring"></span><svg viewBox="0 0 120 136" aria-hidden="true"><use href="#crest"/></svg></div>
+    <h1 class="lword">وسام</h1>
+    <p class="ltag">وعي سعودي أخلاقي مدني</p>
+    <h2 id="lgTitle">تسجيل الدخول</h2>
+    <p class="lsub">أهلاً بك من جديد، سجّل دخولك لمتابعة رحلتك في الوعي الرقمي</p>
+    <label class="lf" for="lgUser"><span class="lic"><svg class="ico"><use href="#i-user"/></svg></span><input id="lgUser" type="text" placeholder="اسم المستخدم" autocomplete="username" spellcheck="false"></label>
+    <label class="lf" for="lgPass"><span class="lic"><svg class="ico"><use href="#i-lock"/></svg></span><input id="lgPass" type="password" placeholder="كلمة المرور" autocomplete="current-password" inputmode="numeric"><button type="button" class="eye" id="lgEye" aria-label="إظهار كلمة المرور"><svg class="ico"><use href="#i-eye"/></svg></button></label>
+    <div class="lrow"><label class="rem" for="lgRem"><input type="checkbox" id="lgRem" checked><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>تذكّرني</label><span class="lsec"><svg class="ico"><use href="#i-shield"/></svg> اتصال آمن</span></div>
+    <p class="lerr" id="lgErr" role="alert" hidden></p>
+    <button class="lbtn" type="submit"><span>دخول</span><svg class="ico flip"><use href="#i-send"/></svg></button>
+    <p class="lfoot">منصة وسام للتوعية والحماية الرقمية</p>
+  </form>
+</div>
 <header class="nav g">
   <div class="wrap">
     <a class="logo" href="#home"><svg class="crest" aria-hidden="true"><use href="#crest"/></svg><span><b>وسام</b><small>وعي سعودي أخلاقي مدني</small></span></a>
     <nav class="links" id="links" aria-label="القائمة">
-      <a href="#dashboard" class="on"><svg class="ico"><use href="#i-home"/></svg>الرئيسية</a>
-      <a href="#learn"><svg class="ico"><use href="#i-book"/></svg>التعلم</a>
-      <a href="#tools"><svg class="ico"><use href="#i-gauge"/></svg>الأدوات</a>
-      <a href="#programs"><svg class="ico"><use href="#i-cal"/></svg>البرامج</a>
-      <a href="#about"><svg class="ico"><use href="#i-users"/></svg>المبادرة</a>
-      <a href="#help"><svg class="ico"><use href="#i-headset"/></svg>الدعم</a>
+      <a href="#home" data-v="home"><svg class="ico"><use href="#i-home"/></svg>الرئيسية</a>
+      <a href="#learn" data-v="learn"><svg class="ico"><use href="#i-book"/></svg>التعلم</a>
+      <a href="#tools" data-v="tools"><svg class="ico"><use href="#i-gauge"/></svg>الأدوات</a>
+      <a href="#ai" data-v="ai"><svg class="ico"><use href="#i-spark"/></svg>المساعد الذكي</a>
+      <a href="#programs" data-v="programs"><svg class="ico"><use href="#i-cal"/></svg>البرامج</a>
+      <a href="#about" data-v="about"><svg class="ico"><use href="#i-users"/></svg>المبادرة</a>
+      <a href="#help" data-v="help"><svg class="ico"><use href="#i-headset"/></svg>الدعم</a>
     </nav>
     <div class="me">
       <a class="bell" href="#ai" aria-label="المساعد الذكي"><svg class="ico"><use href="#i-bell"/></svg><i></i></a>
-      <div class="user"><div><b>مرحباً بك</b><br><span id="lvlTop">مبتدئ</span></div><span class="av"><svg class="ico"><use href="#i-user"/></svg></span></div>
+      <div class="user"><div><b>مرحباً <span id="uName">فهد</span></b><br><span id="lvlTop">مبتدئ</span></div><span class="av" id="uAv">ف</span></div>
+      <button class="bell" id="logout" type="button" aria-label="تسجيل الخروج" title="تسجيل الخروج"><svg class="ico"><use href="#i-logout"/></svg></button>
       <button class="menu" id="menuBtn" type="button" aria-label="فتح القائمة" aria-expanded="false"><svg class="ico"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
 
 <main>
-<div class="shell" id="home">
+<div class="view" id="v-home" data-view="home">
+<div class="shell">
  <div class="grid3">
 
   <!-- ===== Right sidebar: identity, vision, mission, values ===== -->
-  <aside class="side sright" id="about">
+  <aside class="side sright">
     <div class="id">
       <svg class="crest-side" viewBox="0 0 120 136" aria-hidden="true"><use href="#crest"/></svg>
       <h1 class="wordmark">وسام</h1>
@@ -557,7 +725,7 @@ footer .logo b{font-size:1.3rem}
   </aside>
 
   <!-- ===== Center dashboard ===== -->
-  <section class="center" id="dashboard">
+  <section class="center">
     <div class="welcome">
       <div class="wtx">
         <h2>مرحباً بك في منصة وسام</h2>
@@ -624,7 +792,7 @@ footer .logo b{font-size:1.3rem}
     </div>
 
     <div class="row2">
-      <div class="wc progw" id="programs">
+      <div class="wc progw">
         <h3>برامجنا الرئيسية</h3>
         <div class="progs">
           <div class="prog"><svg class="ico"><use href="#i-handshake"/></svg><b>شراكات استراتيجية فعّالة</b></div>
@@ -641,61 +809,46 @@ footer .logo b{font-size:1.3rem}
       </div>
     </div>
 
-    <div class="row3b">
-      <div class="wc">
-        <h3>الفئات المستهدفة</h3>
-        <div class="aud">
-          <div><svg class="ico"><use href="#i-mic"/></svg>الإعلاميون والمؤثرون</div>
-          <div><svg class="ico"><use href="#i-youth"/></svg>الشباب والشابات</div>
-          <div><svg class="ico"><use href="#i-family"/></svg>الأسرة</div>
-          <div><svg class="ico"><use href="#i-building"/></svg>المؤسسات الحكومية والخاصة</div>
-        </div>
-      </div>
-      <div class="wc">
-        <h3>الأثر المتوقع</h3>
-        <div class="trio">
-          <div><svg class="ico"><use href="#i-chart"/></svg><b>أثر اقتصادي</b><ul><li>تعزيز الثقة في المعاملات الرقمية</li><li>دعم الاقتصاد الرقمي</li><li>تقليل الخسائر المالية</li></ul></div>
-          <div><svg class="ico"><use href="#i-shield"/></svg><b>أثر أمني</b><ul><li>الحد من الجرائم الإلكترونية</li><li>رفع الوعي الأمني السيبراني</li><li>حماية الفضاء الرقمي</li></ul></div>
-          <div><svg class="ico"><use href="#i-users"/></svg><b>أثر اجتماعي</b><ul><li>تعزيز القيم الرقمية</li><li>رفع المسؤولية الرقمية</li><li>تعزيز التماسك المجتمعي</li></ul></div>
-        </div>
-      </div>
-      <div class="wc">
-        <h3>أرقامنا المستهدفة <small>(سنوياً)</small></h3>
-        <ul class="tg">
-          <li><svg class="ico"><use href="#i-user"/></svg><span>مستفيد</span><b>+100,000</b></li>
-          <li><svg class="ico"><use href="#i-board"/></svg><span>برنامج تدريبي</span><b>+500</b></li>
-          <li><svg class="ico"><use href="#i-play"/></svg><span>مشاهدة ومتابعة</span><b>+5,000,000</b></li>
-          <li><svg class="ico"><use href="#i-handshake"/></svg><span>شريك ومؤسسة</span><b>+300</b></li>
-        </ul>
-      </div>
-    </div>
   </section>
 
-  <!-- ===== Left panel: smart app with live AI ===== -->
-  <aside class="side sleft" id="ai">
+  <aside class="side sleft">
     <div class="apphead"><h2>تطبيق وسام الذكي</h2><p>رفيقك الذكي للتوعية والحماية الرقمية</p></div>
     <div class="appbody">
-      <div class="phone">
-        <div class="screen">
-          <div class="notch"><span>9:41</span><i></i><span>●●●</span></div>
-          <div class="ph-head">
-            <svg class="crest" aria-hidden="true"><use href="#crest"/></svg>
-            <div><b>وسام</b><span id="aiStatus"><i></i>المساعد الذكي</span></div>
-            <button type="button" id="newChat" aria-label="محادثة جديدة"><svg class="ico"><use href="#i-refresh"/></svg></button>
-          </div>
-          <div class="ph-score">
-            <div><small>حالتك الرقمية</small><b id="phLvl">مبتدئ</b><span><em id="phScore">0</em> / 100</span></div>
-            <svg viewBox="0 0 120 136" aria-hidden="true"><use href="#crest"/></svg>
-          </div>
-          <div class="log" id="log" aria-live="polite"></div>
-          <div class="pchips" id="chips"></div>
-          <form class="comp" id="composer">
-            <label for="q" class="sr">سؤالك</label>
-            <textarea id="q" rows="1" placeholder="اسأل وسام أي سؤال…"></textarea>
-            <button class="send" id="sendBtn" type="submit" aria-label="إرسال"><svg class="ico flip"><use href="#i-send"/></svg></button>
-          </form>
-        </div>
-      </div>
+      <div class="pslot" id="homeSlot"><div class="phone2" id="phoneWrap">
+  <span class="sbtn s1"></span><span class="sbtn s2"></span><span class="sbtn s3"></span><span class="sbtn s4"></span>
+  <div class="screen2">
+    <div class="sbar"><span class="tm" id="phTime">9:41</span><span class="island"></span>
+      <span class="sic"><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+      <svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.5l2.4-2.9a3.6 3.6 0 0 0-4.8 0zM3.4 6.3a7 7 0 0 1 9.2 0l1.6-1.9a9.6 9.6 0 0 0-12.4 0zM.2 2.6a12 12 0 0 1 15.6 0L16 2.4A13 13 0 0 0 0 2.4z"/></svg>
+      <svg viewBox="0 0 26 12" aria-hidden="true"><rect x=".5" y=".5" width="22" height="11" rx="3" fill="none" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="16" height="8" rx="1.8"/><rect x="23.5" y="4" width="2" height="4" rx="1" opacity=".5"/></svg></span>
+    </div>
+    <div class="ph-head2">
+      <span class="pav"><svg viewBox="0 0 120 136" aria-hidden="true"><use href="#crest"/></svg></span>
+      <div><b>وسام</b><span id="aiStatus"><i></i>المساعد الذكي متاح</span></div>
+      <button type="button" id="newChat" aria-label="محادثة جديدة"><svg class="ico"><use href="#i-refresh"/></svg></button>
+    </div>
+    <div class="ph-score2">
+      <div class="psl"><small>حالتك الرقمية</small><b id="phLvl">ابدأ رحلتك</b><span><em id="phScore">0</em>/100</span></div>
+      <svg class="pring" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="6"/><circle id="phRing" cx="32" cy="32" r="26" fill="none" stroke="#7BF0C8" stroke-width="6" stroke-linecap="round" stroke-dasharray="0 163.4" transform="rotate(-90 32 32)"/></svg>
+    </div>
+    <div class="log" id="log" aria-live="polite"></div>
+    <div class="pchips" id="chips"></div>
+    <form class="comp" id="composer">
+      <label for="q" class="sr">سؤالك</label>
+      <textarea id="q" rows="1" placeholder="اسأل وسام أي سؤال…"></textarea>
+      <button class="send" id="sendBtn" type="submit" aria-label="إرسال"><svg class="ico flip"><use href="#i-send"/></svg></button>
+    </form>
+    <nav class="ptabs" aria-label="تنقل التطبيق">
+      <a href="#home" data-v="home"><svg class="ico"><use href="#i-home"/></svg>الرئيسية</a>
+      <a href="#learn" data-v="learn"><svg class="ico"><use href="#i-book"/></svg>التعلم</a>
+      <a href="#ai" data-v="ai" class="mid"><span><svg class="ico"><use href="#i-spark"/></svg></span>المساعد</a>
+      <a href="#tools" data-v="tools"><svg class="ico"><use href="#i-gauge"/></svg>الأدوات</a>
+      <a href="#help" data-v="help"><svg class="ico"><use href="#i-headset"/></svg>الدعم</a>
+    </nav>
+    <span class="homebar"></span>
+  </div>
+</div>
+</div>
       <ul class="flist">
         <li><span><svg class="ico"><use href="#i-shield"/></svg></span>محتوى توعوي شامل ومحدث</li>
         <li><span><svg class="ico"><use href="#i-spark"/></svg></span>إرشادات ذكية بالذكاء الاصطناعي</li>
@@ -709,39 +862,47 @@ footer .logo b{font-size:1.3rem}
  </div>
 </div>
 
-<!-- ===== Initiative poster band (second image) ===== -->
-<section class="poster g">
+</div>
+<div class="view" id="v-learn" data-view="learn">
+<section class="phero g"><div class="wrap"><div class="phin">
+  <span class="phic"><svg class="ico"><use href="#i-book"/></svg></span>
+  <div><nav class="crumb" aria-label="المسار"><a href="#home">الرئيسية</a><span>/</span><b>التعلم</b></nav><h1>دروس الوعي الرقمي</h1><p>ثمانية دروس قصيرة، ثم القواعد الذهبية لتقيس حالتك الرقمية.</p></div>
+</div></div></section>
+<section class="sec g">
   <div class="wrap">
-    <div class="pillars">
-      <div class="pil"><span class="c"><svg class="ico"><use href="#i-users"/></svg></span><b>مجتمع رقمي ناجح</b><small>Successful Digital Society</small></div>
-      <div class="pil"><span class="c"><svg class="ico"><use href="#i-shield"/></svg></span><b>ثقة وأمان</b><small>Trust &amp; Safety</small></div>
-      <div class="pil"><span class="c"><svg class="ico"><use href="#i-bulb"/></svg></span><b>ابتكار مستدام</b><small>Innovation for Sustainability</small></div>
-      <div class="pil"><span class="c"><svg class="ico"><use href="#i-lock"/></svg></span><b>معاملات آمنة</b><small>Secure Transactions</small></div>
-      <div class="pil"><span class="c"><svg class="ico"><use href="#i-chart"/></svg></span><b>مستقبل تقني ملهم</b><small>Inspired Technology Future</small></div>
-    </div>
-    <div class="goalsbox">
-      <h3><svg class="ico"><use href="#i-target"/></svg> أهداف المبادرة</h3>
-      <ul class="goals">
-        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>رفع مستوى الوعي الرقمي لدى جميع فئات المجتمع</li>
-        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>تعزيز المواطنة الرقمية والأمن السيبراني</li>
-        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>الحد من الجرائم الإلكترونية والممارسات الضارة</li>
-        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>تمكين المجتمع من استخدام التقنيات الحديثة بأمان</li>
-        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>دعم مستهدفات التحول الرقمي ورؤية المملكة ٢٠٣٠</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="sec g" id="learn">
-  <div class="wrap">
-    <div class="sh"><span class="k"><svg class="ico"><use href="#i-book"/></svg> التعلم</span><h2>دروس الوعي الرقمي</h2><p>ثمانية دروس قصيرة. افتح الدرس، اقرأ النصائح، ثم اضغط «أكملت الدرس» ليُضاف إلى تقدّمك.</p></div>
+    
     <div class="lessons" id="lessons"></div>
   </div>
 </section>
 
-<section class="sec g" id="tools">
+<section class="sec g">
   <div class="wrap">
-    <div class="sh"><span class="k"><svg class="ico"><use href="#i-gauge"/></svg> الأدوات الذكية</span><h2>افحص وتحقّق بنفسك</h2><p>أدوات تعمل داخل متصفحك مباشرة، ولا ترسل بياناتك لأي جهة.</p></div>
+    <div class="sh"><span class="k"><svg class="ico"><use href="#i-check"/></svg> القواعد الذهبية</span><h2>كم قاعدة تطبّقها فعلاً؟</h2><p>علّم على ما تطبّقه الآن لتعرف حالتك الرقمية.</p></div>
+    <div class="rules">
+      <div class="pane score">
+        <svg viewBox="0 0 120 120" role="img" aria-label="حالتك الرقمية">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#062B27" stroke-width="10"/>
+          <circle id="ring" cx="60" cy="60" r="50" fill="none" stroke="url(#gGold)" stroke-width="10" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset .5s"/>
+          <text id="ringTxt" x="60" y="66" text-anchor="middle" fill="#EEF4F0" font-size="24" font-family="Reem Kufi, sans-serif">0/10</text>
+        </svg>
+        <div style="color:var(--muted);font-size:.9rem">حالتك الرقمية</div>
+        <div class="rank" id="rank"><svg class="ico"><use href="#i-shield"/></svg><span>مبتدئ</span></div>
+      </div>
+      <div class="rlist" id="rlist"></div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+<div class="view" id="v-tools" data-view="tools">
+<section class="phero g"><div class="wrap"><div class="phin">
+  <span class="phic"><svg class="ico"><use href="#i-gauge"/></svg></span>
+  <div><nav class="crumb" aria-label="المسار"><a href="#home">الرئيسية</a><span>/</span><b>الأدوات</b></nav><h1>الأدوات الذكية</h1><p>افحص الروابط وكلمات المرور، واختبر قدرتك على كشف الاحتيال.</p></div>
+</div></div></section>
+<section class="sec g">
+  <div class="wrap">
+    
     <div class="tools">
       <div class="tool">
         <h3><span class="ti"><svg class="ico"><use href="#i-link"/></svg></span>فحص الروابط</h3>
@@ -772,27 +933,118 @@ footer .logo b{font-size:1.3rem}
   </div>
 </section>
 
-<section class="sec g" id="rules">
-  <div class="wrap">
-    <div class="sh"><span class="k"><svg class="ico"><use href="#i-check"/></svg> القواعد الذهبية</span><h2>كم قاعدة تطبّقها فعلاً؟</h2><p>علّم على ما تطبّقه الآن لتعرف حالتك الرقمية.</p></div>
-    <div class="rules">
-      <div class="pane score">
-        <svg viewBox="0 0 120 120" role="img" aria-label="حالتك الرقمية">
-          <circle cx="60" cy="60" r="50" fill="none" stroke="#062B27" stroke-width="10"/>
-          <circle id="ring" cx="60" cy="60" r="50" fill="none" stroke="url(#gGold)" stroke-width="10" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset .5s"/>
-          <text id="ringTxt" x="60" y="66" text-anchor="middle" fill="#EEF4F0" font-size="24" font-family="Reem Kufi, sans-serif">0/10</text>
-        </svg>
-        <div style="color:var(--muted);font-size:.9rem">حالتك الرقمية</div>
-        <div class="rank" id="rank"><svg class="ico"><use href="#i-shield"/></svg><span>مبتدئ</span></div>
+
+</div>
+<div class="view" id="v-ai" data-view="ai">
+<section class="phero g"><div class="wrap"><div class="phin">
+  <span class="phic"><svg class="ico"><use href="#i-spark"/></svg></span>
+  <div><nav class="crumb" aria-label="المسار"><a href="#home">الرئيسية</a><span>/</span><b>المساعد الذكي</b></nav><h1>مساعد وسام الذكي</h1><p>اسأله أي سؤال عن الأمان الرقمي أو أي موضوع آخر، ويجيبك بالعربية فوراً.</p></div>
+</div></div></section>
+<section class="sec g aipage"><div class="wrap"><div class="aig">
+  <div class="aicol">
+    <div class="pane"><h3><svg class="ico"><use href="#i-bulb"/></svg> جرّب أن تسأل</h3>
+      <div class="sugg" id="sugg"></div></div>
+    <div class="pane"><h3><svg class="ico"><use href="#i-lock"/></svg> خصوصيتك أولاً</h3><p>لا تكتب في المحادثة كلمات مرورك أو رموز التحقق أو أرقام بطاقاتك. وسام لن يطلبها منك أبداً.</p></div>
+  </div>
+  <div class="pslot big" id="aiSlot"></div>
+  <div class="aicol">
+    <div class="f"><span class="fi"><svg class="ico"><use href="#i-news"/></svg></span><div><b>تحقق من الأخبار</b><span>الصق أي رسالة متداولة واسأله عن صحتها</span></div></div>
+    <div class="f"><span class="fi"><svg class="ico"><use href="#i-hook"/></svg></span><div><b>اكشف الاحتيال</b><span>اوصف الرسالة التي وصلتك ليحللها</span></div></div>
+    <div class="f"><span class="fi"><svg class="ico"><use href="#i-family"/></svg></span><div><b>نصائح للأسرة</b><span>كيف تحمي أطفالك ووالديك رقمياً</span></div></div>
+    <div class="f"><span class="fi"><svg class="ico"><use href="#i-alert"/></svg></span><div><b>خطة طوارئ</b><span>ماذا تفعل لو اختُرق حسابك الآن</span></div></div>
+  </div>
+</div></div></section>
+
+</div>
+<div class="view" id="v-programs" data-view="programs">
+<section class="phero g"><div class="wrap"><div class="phin">
+  <span class="phic"><svg class="ico"><use href="#i-cal"/></svg></span>
+  <div><nav class="crumb" aria-label="المسار"><a href="#home">الرئيسية</a><span>/</span><b>البرامج</b></nav><h1>برامجنا الرئيسية</h1><p>خمسة برامج تعمل معاً لنشر الوعي الرقمي في كل بيت ومدرسة وجهة.</p></div>
+</div></div></section>
+<section class="sec g"><div class="wrap">
+  <div class="pcards">
+    <div class="pcard"><span class="pci"><svg class="ico"><use href="#i-mega"/></svg></span><h3>حملات توعوية إعلامية</h3><p>رسائل قصيرة ومؤثرة عبر منصات التواصل والإعلام، تصل للناس حيث يقضون وقتهم.</p><ul><li>مقاطع قصيرة أسبوعية</li><li>حملات موسمية (الأعياد، العودة للمدارس)</li></ul></div>
+    <div class="pcard"><span class="pci"><svg class="ico"><use href="#i-board"/></svg></span><h3>دورات وورش عمل تدريبية</h3><p>جلسات تفاعلية للطلاب والمعلمين والموظفين وأولياء الأمور.</p><ul><li>ورش للمدارس والجامعات</li><li>برامج للجهات والشركات</li></ul></div>
+    <div class="pcard"><span class="pci"><svg class="ico"><use href="#i-video"/></svg></span><h3>استوديو وسام الرقمي</h3><p>محتوى مرئي وبودكاست يبسّط مفاهيم الأمن الرقمي بلغة قريبة من الجميع.</p><ul><li>سلسلة «ثانية قبل الضغط»</li><li>قصص واقعية للتوعية</li></ul></div>
+    <div class="pcard"><span class="pci"><svg class="ico"><use href="#i-trophy"/></svg></span><h3>جائزة وسام للتميز</h3><p>تكريم الأفراد والمبادرات التي تصنع أثراً حقيقياً في الوعي الرقمي.</p><ul><li>فئة الطلاب المبدعين</li><li>فئة المبادرات المجتمعية</li></ul></div>
+    <div class="pcard"><span class="pci"><svg class="ico"><use href="#i-handshake"/></svg></span><h3>شراكات استراتيجية فعّالة</h3><p>تعاون مع الجهات التعليمية والمجتمعية لتوسيع أثر التوعية.</p><ul><li>برامج مشتركة</li><li>تبادل المحتوى والخبرات</li></ul></div>
+  </div>
+  <div class="lightbox">
+    <div class="row3b">
+      <div class="wc">
+        <h3>الفئات المستهدفة</h3>
+        <div class="aud">
+          <div><svg class="ico"><use href="#i-mic"/></svg>الإعلاميون والمؤثرون</div>
+          <div><svg class="ico"><use href="#i-youth"/></svg>الشباب والشابات</div>
+          <div><svg class="ico"><use href="#i-family"/></svg>الأسرة</div>
+          <div><svg class="ico"><use href="#i-building"/></svg>المؤسسات الحكومية والخاصة</div>
+        </div>
       </div>
-      <div class="rlist" id="rlist"></div>
+      <div class="wc">
+        <h3>الأثر المتوقع</h3>
+        <div class="trio">
+          <div><svg class="ico"><use href="#i-chart"/></svg><b>أثر اقتصادي</b><ul><li>تعزيز الثقة في المعاملات الرقمية</li><li>دعم الاقتصاد الرقمي</li><li>تقليل الخسائر المالية</li></ul></div>
+          <div><svg class="ico"><use href="#i-shield"/></svg><b>أثر أمني</b><ul><li>الحد من الجرائم الإلكترونية</li><li>رفع الوعي الأمني السيبراني</li><li>حماية الفضاء الرقمي</li></ul></div>
+          <div><svg class="ico"><use href="#i-users"/></svg><b>أثر اجتماعي</b><ul><li>تعزيز القيم الرقمية</li><li>رفع المسؤولية الرقمية</li><li>تعزيز التماسك المجتمعي</li></ul></div>
+        </div>
+      </div>
+      <div class="wc">
+        <h3>أرقامنا المستهدفة <small>(سنوياً)</small></h3>
+        <ul class="tg">
+          <li><svg class="ico"><use href="#i-user"/></svg><span>مستفيد</span><b>+100,000</b></li>
+          <li><svg class="ico"><use href="#i-board"/></svg><span>برنامج تدريبي</span><b>+500</b></li>
+          <li><svg class="ico"><use href="#i-play"/></svg><span>مشاهدة ومتابعة</span><b>+5,000,000</b></li>
+          <li><svg class="ico"><use href="#i-handshake"/></svg><span>شريك ومؤسسة</span><b>+300</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+</div>
+<div class="view" id="v-about" data-view="about">
+<section class="phero g"><div class="wrap"><div class="phin">
+  <span class="phic"><svg class="ico"><use href="#i-users"/></svg></span>
+  <div><nav class="crumb" aria-label="المسار"><a href="#home">الرئيسية</a><span>/</span><b>المبادرة</b></nav><h1>عن مبادرة وسام</h1><p>مبادرة لتعزيز الوعي الرقمي وسد الفجوة الرقمية في المجتمع السعودي.</p></div>
+</div></div></section>
+<section class="sec g" style="padding-bottom:10px"><div class="wrap"><div class="about">
+  <div class="pane"><h3><svg class="ico"><use href="#i-eye"/></svg> رؤيتنا</h3><p>الريادة في رفع مستوى الوعي بالتعامل مع العالم الرقمي لدى المجتمع السعودي.</p></div>
+  <div class="pane"><h3><svg class="ico"><use href="#i-send"/></svg> رسالتنا</h3><p>بناء مجتمع رقمي واعٍ ومسؤول من خلال برامج توعوية وتثقيفية مبتكرة تعزز السلوك الرقمي الإيجابي وتحد من المخاطر الإلكترونية.</p></div>
+  <div class="pane"><h3><svg class="ico"><use href="#i-medal"/></svg> قيمنا</h3>
+    <div class="values"><div><svg class="ico"><use href="#i-search"/></svg>الشفافية</div><div><svg class="ico"><use href="#i-shield"/></svg>الأمانة</div><div><svg class="ico"><use href="#i-handshake"/></svg>الالتزام</div><div><svg class="ico"><use href="#i-medal"/></svg>التخصص</div></div></div>
+</div></div></section>
+<section class="poster g">
+  <div class="wrap">
+    <div class="pillars">
+      <div class="pil"><span class="c"><svg class="ico"><use href="#i-users"/></svg></span><b>مجتمع رقمي ناجح</b><small>Successful Digital Society</small></div>
+      <div class="pil"><span class="c"><svg class="ico"><use href="#i-shield"/></svg></span><b>ثقة وأمان</b><small>Trust &amp; Safety</small></div>
+      <div class="pil"><span class="c"><svg class="ico"><use href="#i-bulb"/></svg></span><b>ابتكار مستدام</b><small>Innovation for Sustainability</small></div>
+      <div class="pil"><span class="c"><svg class="ico"><use href="#i-lock"/></svg></span><b>معاملات آمنة</b><small>Secure Transactions</small></div>
+      <div class="pil"><span class="c"><svg class="ico"><use href="#i-chart"/></svg></span><b>مستقبل تقني ملهم</b><small>Inspired Technology Future</small></div>
+    </div>
+    <div class="goalsbox">
+      <h3><svg class="ico"><use href="#i-target"/></svg> أهداف المبادرة</h3>
+      <ul class="goals">
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>رفع مستوى الوعي الرقمي لدى جميع فئات المجتمع</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>تعزيز المواطنة الرقمية والأمن السيبراني</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>الحد من الجرائم الإلكترونية والممارسات الضارة</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>تمكين المجتمع من استخدام التقنيات الحديثة بأمان</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>دعم مستهدفات التحول الرقمي ورؤية المملكة ٢٠٣٠</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="sec g" id="help">
+
+</div>
+<div class="view" id="v-help" data-view="help">
+<section class="phero g"><div class="wrap"><div class="phin">
+  <span class="phic"><svg class="ico"><use href="#i-headset"/></svg></span>
+  <div><nav class="crumb" aria-label="المسار"><a href="#home">الرئيسية</a><span>/</span><b>الدعم</b></nav><h1>الدعم والإبلاغ</h1><p>خطوات واضحة إذا تعرّضت لاختراق أو احتيال، والجهات التي ترجع إليها.</p></div>
+</div></div></section>
+<section class="sec g">
   <div class="wrap">
-    <div class="sh"><span class="k" style="color:var(--danger)"><svg class="ico"><use href="#i-alert"/></svg> الدعم والإبلاغ</span><h2>إذا تعرّضت للاختراق أو الاحتيال</h2><p>السرعة والترتيب الصحيح للخطوات هما الأهم.</p></div>
+    
     <div class="help">
       <div class="pane"><h3><svg class="ico"><use href="#i-lock"/></svg> اخترق حسابك؟</h3><ol><li>غيّر كلمة المرور فوراً من جهاز آمن.</li><li>سجّل الخروج من جميع الأجهزة.</li><li>فعّل التحقق بخطوتين.</li><li>نبّه أصدقاءك من رسائل باسمك.</li></ol></div>
       <div class="pane"><h3><svg class="ico"><use href="#i-cart"/></svg> سُرقت أموالك أو بطاقتك؟</h3><ol><li>اتصل ببنكك فوراً عبر الرقم الرسمي خلف البطاقة.</li><li>أوقف البطاقة من تطبيق البنك.</li><li>احتفظ بلقطات الشاشة والرسائل.</li><li>قدّم بلاغاً رسمياً.</li></ol></div>
@@ -801,6 +1053,8 @@ footer .logo b{font-size:1.3rem}
     </div>
   </div>
 </section>
+
+</div>
 </main>
 
 <div class="ticker g">
@@ -849,19 +1103,59 @@ function save(){try{localStorage.setItem("wisam-state",JSON.stringify(S))}catch(
 function act(icon,text){S.acts.unshift({icon,text,t:Date.now()});S.acts=S.acts.slice(0,4);save();render();}
 function ago(t){const m=Math.round((Date.now()-t)/60000);if(m<1)return"الآن";if(m<60)return`قبل ${ar(m)} دقيقة`;const h=Math.round(m/60);if(h<24)return`قبل ${ar(h)} ساعة`;return`قبل ${ar(Math.round(h/24))} يوم`;}
 
-/* ---------- Menu ---------- */
-$("#menuBtn").onclick=()=>{const o=$("#links").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",o)};
-document.querySelectorAll("#links a").forEach(a=>a.addEventListener("click",()=>{$("#links").classList.remove("open");document.querySelectorAll("#links a").forEach(x=>x.classList.toggle("on",x===a));}));
-
-/* ---------- Network canvas ---------- */
-(function(){const c=$("#net"),x=c.getContext("2d");let P=[],w,h;const red=matchMedia("(prefers-reduced-motion: reduce)").matches;
- function size(){const r=c.getBoundingClientRect();w=c.width=r.width*devicePixelRatio;h=c.height=r.height*devicePixelRatio;
-   const n=Math.min(70,Math.round(r.width/18));P=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25*devicePixelRatio,vy:(Math.random()-.5)*.25*devicePixelRatio}));draw();}
- function draw(){x.clearRect(0,0,w,h);const D=130*devicePixelRatio;
+/* ---------- Network canvas (reusable) ---------- */
+function netFx(c,dens){const x=c.getContext("2d");let P=[],w=0,h=0;const red=matchMedia("(prefers-reduced-motion: reduce)").matches;
+ function size(){const r=c.getBoundingClientRect();if(!r.width)return;w=c.width=r.width*devicePixelRatio;h=c.height=r.height*devicePixelRatio;
+   const n=Math.min(90,Math.round(r.width/dens));P=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.3*devicePixelRatio,vy:(Math.random()-.5)*.3*devicePixelRatio}));draw();}
+ function draw(){if(!w)return;x.clearRect(0,0,w,h);const D=130*devicePixelRatio;
    for(let i=0;i<P.length;i++){const a=P[i];for(let j=i+1;j<P.length;j++){const b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<D){x.strokeStyle=`rgba(214,178,98,${.22*(1-d/D)})`;x.lineWidth=devicePixelRatio;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}}
-     x.fillStyle="rgba(70,214,163,.7)";x.beginPath();x.arc(a.x,a.y,1.6*devicePixelRatio,0,7);x.fill();}}
- function tick(){P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1});draw();requestAnimationFrame(tick);}
- size();addEventListener("resize",size);if(!red)requestAnimationFrame(tick);})();
+     x.fillStyle="rgba(70,214,163,.75)";x.beginPath();x.arc(a.x,a.y,1.6*devicePixelRatio,0,7);x.fill();}}
+ function tick(){if(c.offsetParent!==null||c.closest(".login")){P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1});draw();}requestAnimationFrame(tick);}
+ size();addEventListener("resize",size);if(!red)requestAnimationFrame(tick);return{size};}
+const homeNet=netFx($("#net"),18);
+const loginNet=netFx($("#lgNet"),24);
+
+/* ---------- Router: each icon opens its own page ---------- */
+const VIEWS=["home","learn","tools","ai","programs","about","help"];
+let curView=null;
+function go(v,scroll=true){
+  if(!VIEWS.includes(v))v="home";
+  document.querySelectorAll(".view").forEach(el=>el.classList.toggle("on",el.dataset.view===v));
+  document.querySelectorAll("[data-v]").forEach(a=>a.classList.toggle("on",a.dataset.v===v));
+  const pw=$("#phoneWrap"),slot=v==="ai"?$("#aiSlot"):$("#homeSlot");if(pw.parentNode!==slot)slot.appendChild(pw);
+  $("#links").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");
+  if(scroll&&curView!==null)window.scrollTo({top:0,behavior:"instant"});
+  curView=v;if(v==="home")homeNet.size();
+  try{document.title=(v==="home"?"":document.querySelector(`#links a[data-v="${v}"]`).textContent.trim()+" · ")+"منصة وسام"}catch(e){}
+}
+addEventListener("hashchange",()=>go(location.hash.slice(1)));
+document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const v=a.getAttribute("href").slice(1);
+  if(VIEWS.includes(v)){e.preventDefault();if(location.hash.slice(1)!==v){try{history.pushState(null,"","#"+v)}catch(_){}}go(v);}});
+addEventListener("popstate",()=>go(location.hash.slice(1)));
+$("#menuBtn").onclick=()=>{const o=$("#links").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",o)};
+go(location.hash.slice(1),false);
+
+/* ---------- Login ---------- */
+const USER="فهد",PASS="8383";
+const norm=t=>String(t||"").trim().replace(/[ً-ْـ]/g,"");
+const toLatin=t=>String(t||"").replace(/[٠-٩]/g,d=>"٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g,d=>"۰۱۲۳۴۵۶۷۸۹".indexOf(d)).trim();
+let authed=false;try{authed=localStorage.getItem("wisam-auth")===USER||sessionStorage.getItem("wisam-auth")===USER}catch(e){}
+function showLogin(){const L=$("#login");L.hidden=false;L.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{$("#lgUser").focus();loginNet.size();},50);}
+function enter(){const L=$("#login");L.classList.add("out");document.body.classList.remove("locked");setTimeout(()=>{L.hidden=true},650);
+  $("#uName").textContent=USER;$("#uAv").textContent=USER[0];}
+if(authed){$("#login").hidden=true;$("#uName").textContent=USER;$("#uAv").textContent=USER[0];}else showLogin();
+$("#lgEye").onclick=()=>{const p=$("#lgPass"),sh=p.type==="password";p.type=sh?"text":"password";$("#lgEye").innerHTML=ic(sh?"eyeoff":"eye");$("#lgEye").setAttribute("aria-label",sh?"إخفاء كلمة المرور":"إظهار كلمة المرور");};
+$("#lgForm").addEventListener("submit",e=>{e.preventDefault();const u=norm($("#lgUser").value),p=toLatin($("#lgPass").value),err=$("#lgErr"),card=$("#lgForm");
+  if(!u||!p){err.textContent="اكتب اسم المستخدم وكلمة المرور.";err.hidden=false;return;}
+  if(u===USER&&p===PASS){err.hidden=true;const btn=card.querySelector(".lbtn");btn.disabled=true;btn.querySelector("span").textContent="جاري الدخول…";
+    try{($("#lgRem").checked?localStorage:sessionStorage).setItem("wisam-auth",USER)}catch(_){}
+    if(!S.acts.length||S.acts[0].text.indexOf("تسجيل الدخول")<0)act("user","تسجيل الدخول إلى المنصة");
+    setTimeout(()=>{enter();btn.disabled=false;btn.querySelector("span").textContent="دخول";},700);}
+  else{err.textContent="اسم المستخدم أو كلمة المرور غير صحيحة. حاول مرة أخرى.";err.hidden=false;card.classList.remove("shake");void card.offsetWidth;card.classList.add("shake");$("#lgPass").value="";$("#lgPass").focus();}});
+$("#logout").onclick=()=>{try{localStorage.removeItem("wisam-auth");sessionStorage.removeItem("wisam-auth")}catch(e){}$("#lgPass").value="";showLogin();};
+
+/* ---------- Phone clock ---------- */
+function clock(){const d=new Date();$("#phTime").textContent=d.getHours()+":"+String(d.getMinutes()).padStart(2,"0");}clock();setInterval(clock,30000);
 
 /* ---------- Lessons ---------- */
 const L=[
@@ -911,7 +1205,7 @@ function render(){
   $("#dProg").setAttribute("stroke-dasharray",`${pp} ${C}`);$("#dProg").setAttribute("stroke-dashoffset",-dd);
   const overall=Math.round(parts.reduce((a,p)=>a+p,0)/3*100);$("#dTxt").textContent=overall+"%";
   $("#lgDone").textContent=done+"%";$("#lgProg").textContent=prog+"%";$("#lgNot").textContent=Math.max(0,100-done-prog)+"%";
-  const score=Math.round(overall);$("#phScore").textContent=score;$("#phLvl").textContent=score>=85?"ممتاز":score>=60?"جيد جداً":score>=30?"جيد":"ابدأ رحلتك";
+  const score=Math.round(overall);$("#phScore").textContent=score;$("#phRing").setAttribute("stroke-dasharray",`${score/100*163.4} 163.4`);$("#phLvl").textContent=score>=85?"ممتاز":score>=60?"جيد جداً":score>=30?"جيد":"ابدأ رحلتك";
   $("#acts").innerHTML=S.acts.length?S.acts.map(a=>`<li><span class="ai">${ic(a.icon)}</span><div><b>${esc(a.text)}</b><span>${ago(a.t)}</span></div></li>`).join(""):`<li class="empty">لا يوجد نشاط بعد. افتح أول درس أو جرّب الاختبار.</li>`;
   renderLessons();
 }
@@ -1077,7 +1371,8 @@ async function ask(text){
     if(code==="cancelled"){if(e.text){out.innerHTML=md(e.text);turns.push({role:"assistant",content:e.text});}else{out.innerHTML='<p style="color:var(--muted)">تم الإيقاف.</p>';turns.pop();}}
     else{turns.pop();out.classList.add("err");out.innerHTML=(e&&e.text&&code!=="refused"?md(e.text):"")+`<p style="color:var(--danger)">${ERR[code]||ERR.upstream_error}</p>`;}}
   finally{setBusy(false);ctl=null;log.scrollTop=log.scrollHeight;}}
-function askFrom(t){$("#ai").scrollIntoView({behavior:"smooth"});ask(t);}
+function askFrom(t){if(curView!=="home"&&curView!=="ai"){try{history.pushState(null,"","#ai")}catch(_){}go("ai");}else if(curView==="home"&&innerWidth<920){$("#phoneWrap").scrollIntoView({behavior:"smooth",block:"center"});}ask(t);}
+["كيف أعرف أن الرابط احتيالي؟","ما هو التحقق بخطوتين وكيف أفعّله؟","وصلتني رسالة تطلب رمز التحقق، ماذا أفعل؟","كيف أحمي أطفالي على الإنترنت؟","هل الواي فاي العام خطير؟","كيف أكتشف المقاطع المزيفة بالذكاء الاصطناعي؟"].forEach(t=>{const b=document.createElement("button");b.type="button";b.innerHTML=ic("chat")+"<span></span>";b.querySelector("span").textContent=t;b.onclick=()=>ask(t);$("#sugg").appendChild(b);});
 $("#composer").addEventListener("submit",e=>{e.preventDefault();if(busy){ctl?.abort();return;}ask(ta.value);});
 ta.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey&&!e.isComposing){e.preventDefault();if(!busy)ask(ta.value);}});
 function autosize(){ta.style.height="auto";ta.style.height=Math.min(ta.scrollHeight,110)+"px";}
