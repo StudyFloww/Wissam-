@@ -641,6 +641,20 @@ body.locked{overflow:hidden}
 .tyes:disabled::after{display:none}
 @media (max-width:560px){.thead{padding:18px}.tcrest{width:48px;height:54px}.tbody{padding:4px 18px 16px}.tfoot{padding:14px 18px 18px}.tno{padding:0 14px}}
 .fterms{background:none;border:none;color:var(--gold-2);text-decoration:underline;text-underline-offset:4px;padding:0;font-size:.85rem}
+.tl li.first{border-color:var(--gold);background:radial-gradient(260px 100px at 90% 0%,rgba(214,178,98,.18),transparent),rgba(2,23,20,.45)}
+.tl li.first>.ico{color:var(--gold)}
+.tl li b em{font-style:normal;font-size:.72rem;font-weight:600;color:var(--gold-ink);background:var(--gold);padding:1px 8px;border-radius:99px;margin-inline-start:6px;vertical-align:middle}
+.crime{margin-top:14px;padding:18px;border-radius:20px;border:1px solid rgba(240,122,110,.45);background:radial-gradient(320px 140px at 90% 0%,rgba(240,122,110,.16),transparent),rgba(2,23,20,.5)}
+.cr-top{display:flex;gap:12px;align-items:center}
+.cr-ic{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:24px;color:#fff;background:linear-gradient(140deg,#F49A8E,#C8423A);flex:none}
+.cr-top small{display:block;font-size:.76rem;color:var(--muted)}
+.cr-top b{font-family:var(--f-display);font-size:1.2rem}
+.crime p{margin-top:12px;color:var(--fg);opacity:.9;line-height:1.8;font-size:.93rem}
+.cr-pen{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.cr-pen div{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px;border-radius:14px;background:rgba(240,122,110,.1);border:1px solid rgba(240,122,110,.3)}
+.cr-pen .ico{font-size:20px;color:#FFB4AA}
+.cr-pen span{font-size:.78rem;color:var(--muted)}
+.cr-pen b{font-family:var(--f-display);font-size:1.3rem;color:#FFD3CC;font-variant-numeric:tabular-nums}
 </style>
 
 </head>
@@ -732,7 +746,6 @@ body.locked{overflow:hidden}
       <a href="#t2" data-t="t2"><svg class="ico"><use href="#i-alert"/></svg><span>الجرائم المعلوماتية</span></a>
       <a href="#t3" data-t="t3"><svg class="ico"><use href="#i-lock"/></svg><span>البيانات الشخصية</span></a>
       <a href="#t4" data-t="t4"><svg class="ico"><use href="#i-spark"/></svg><span>المساعد الذكي</span></a>
-      <a href="#t5" data-t="t5"><svg class="ico"><use href="#i-check"/></svg><span>تعهّدي</span></a>
     </nav>
     <div class="tprog"><i id="tProg"></i></div>
     <div class="tbody" id="tBody" tabindex="0">
@@ -740,29 +753,22 @@ body.locked{overflow:hidden}
         <h2><span class="tn">١</span>أخلاقيات التعامل مع العالم الرقمي</h2>
         <p>العالم الرقمي امتداد لحياتنا الحقيقية، وما لا نقبله في الواقع لا نقبله خلف الشاشة.</p>
         <ul class="tl">
-          <li><svg class="ico"><use href="#i-users"/></svg><div><b>الاحترام</b>أتعامل مع الآخرين باحترام، ولا أسيء أو أسخر أو أتنمّر على أحد.</div></li>
+          <li class="first"><svg class="ico"><use href="#i-shield"/></svg><div><b>النزاهة <em>المبدأ الأول</em></b>أكون صادقاً ونزيهاً في كل تعاملاتي الرقمية، فلا أغش ولا أخدع ولا أضلّل أحداً.</div></li>
           <li><svg class="ico"><use href="#i-news"/></svg><div><b>التحقق قبل النشر</b>لا أنشر خبراً أو مقطعاً قبل التأكد من مصدره الرسمي، ولا أشارك في نشر الشائعات.</div></li>
           <li><svg class="ico"><use href="#i-eyeoff"/></svg><div><b>احترام الخصوصية</b>لا أصوّر أحداً ولا أنشر صوره أو معلوماته أو محادثاته دون إذنه.</div></li>
           <li><svg class="ico"><use href="#i-medal"/></svg><div><b>الأمانة الرقمية</b>أحترم حقوق الملكية الفكرية، وأنسب المحتوى لأصحابه، ولا أنتحل شخصية غيري.</div></li>
-          <li><svg class="ico"><use href="#i-shield"/></svg><div><b>المسؤولية</b>أمثّل قيمي ومجتمعي في كل ما أكتبه وأنشره، وأبلّغ عن المحتوى الضار بدل نشره.</div></li>
+          <li><svg class="ico"><use href="#i-handshake"/></svg><div><b>المسؤولية</b>أمثّل قيمي ومجتمعي في كل ما أكتبه وأنشره، وأبلّغ عن المحتوى الضار بدل نشره.</div></li>
         </ul>
       </section>
 
       <section class="tsec" id="t2">
         <h2><span class="tn">٢</span>الجرائم المعلوماتية وعقوباتها</h2>
-        <p>يجرّم <b>نظام مكافحة جرائم المعلوماتية</b> في المملكة العربية السعودية (الصادر بالمرسوم الملكي رقم م/17 بتاريخ 8/3/1428هـ) أفعالاً كثيرة قد يستهين بها البعض. هذه أبرزها:</p>
-        <div class="tscroll"><table class="tt">
-          <thead><tr><th>المادة</th><th>من الأفعال المجرّمة</th><th>العقوبة القصوى</th></tr></thead>
-          <tbody>
-            <tr><td><b>الثالثة</b></td><td>التنصّت على البيانات، الابتزاز والتهديد، المساس بالحياة الخاصة بإساءة استخدام كاميرا الجوال، التشهير بالآخرين وإلحاق الضرر بهم</td><td><span class="pen">سجن حتى سنة</span><span class="pen">غرامة حتى 500,000 ريال</span></td></tr>
-            <tr><td><b>الرابعة</b></td><td>الاحتيال للاستيلاء على أموال أو سندات، والوصول دون حق إلى بيانات بنكية أو ائتمانية</td><td><span class="pen">سجن حتى 3 سنوات</span><span class="pen">غرامة حتى 2,000,000 ريال</span></td></tr>
-            <tr><td><b>الخامسة</b></td><td>حذف البيانات أو تسريبها أو إتلافها دون حق، وتعطيل الشبكات والأنظمة والخدمات</td><td><span class="pen">سجن حتى 4 سنوات</span><span class="pen">غرامة حتى 3,000,000 ريال</span></td></tr>
-            <tr><td><b>السادسة</b></td><td>إنتاج أو نشر ما يمس النظام العام أو القيم الدينية أو الآداب العامة أو حرمة الحياة الخاصة</td><td><span class="pen">سجن حتى 5 سنوات</span><span class="pen">غرامة حتى 3,000,000 ريال</span></td></tr>
-            <tr><td><b>السابعة</b></td><td>إنشاء مواقع للمنظمات الإرهابية أو الترويج لها، والوصول إلى بيانات تمس الأمن الوطني أو الاقتصاد الوطني</td><td><span class="pen">سجن حتى 10 سنوات</span><span class="pen">غرامة حتى 5,000,000 ريال</span></td></tr>
-          </tbody>
-        </table></div>
-        <p class="tnote"><svg class="ico"><use href="#i-alert"/></svg>العقوبة قد تكون السجن أو الغرامة أو كليهما. ويعاقب النظام أيضاً من حرّض على الجريمة أو ساعد عليها أو شرع فيها. هذا ملخص توعوي وليس استشارة قانونية.</p>
-        <p class="tnote ok"><svg class="ico"><use href="#i-flag"/></svg>للإبلاغ عن جريمة معلوماتية استخدم تطبيق <b>«كلنا أمن»</b>.</p>
+        <div class="crime">
+          <div class="cr-top"><span class="cr-ic"><svg class="ico"><use href="#i-alert"/></svg></span><div><small>نظام مكافحة جرائم المعلوماتية · المادة الثالثة</small><b>انتهاك الخصوصية والتشهير والابتزاز</b></div></div>
+          <p>تصوير الآخرين بالجوال دون إذنهم، أو نشر صورهم وأسرارهم، أو التشهير بهم، أو ابتزازهم وتهديدهم عبر الإنترنت.</p>
+          <div class="cr-pen"><div><svg class="ico"><use href="#i-lock"/></svg><span>السجن حتى</span><b>سنة</b></div><div><svg class="ico"><use href="#i-cart"/></svg><span>غرامة حتى</span><b>500,000 ريال</b></div></div>
+        </div>
+        <p class="tnote ok"><svg class="ico"><use href="#i-flag"/></svg>للإبلاغ عن أي جريمة معلوماتية استخدم تطبيق <b>«كلنا أمن»</b>.</p>
       </section>
 
       <section class="tsec" id="t3">
@@ -790,27 +796,15 @@ body.locked{overflow:hidden}
           <li><svg class="ico"><use href="#i-building"/></svg><div><b>ليس بديلاً عن المختص</b>إجاباته توعوية، وليست استشارة قانونية أو طبية أو مالية.</div></li>
           <li><svg class="ico"><use href="#i-handshake"/></svg><div><b>استخدام مسؤول</b>لا أستخدم المساعد في الإساءة للآخرين أو لأي غرض مخالف للأنظمة.</div></li>
         </ul>
-      </section>
-
-      <section class="tsec" id="t5">
-        <h2><span class="tn">٥</span>تعهّدي كمستخدم</h2>
-        <div class="pledge">
-          <p>أتعهّد بأن أكون مواطناً رقمياً مسؤولاً:</p>
-          <ol>
-            <li>أستخدم الإنترنت بما يرضي الله ثم ضميري ويخدم وطني ومجتمعي.</li>
-            <li>أحمي بياناتي وبيانات غيري، ولا أعتدي على خصوصية أحد.</li>
-            <li>أتحقّق قبل أن أنشر، وأفكّر قبل أن أضغط.</li>
-            <li>أبلّغ عن أي جريمة أو محتوى ضار عبر القنوات الرسمية.</li>
-            <li>ألتزم بأنظمة المملكة العربية السعودية في كل تعاملاتي الرقمية.</li>
-          </ol>
-        </div>
         <p class="tend" id="tEnd"><svg class="ico"><use href="#i-check"/></svg> وصلت إلى نهاية الميثاق</p>
       </section>
+
+      
     </div>
 
     <footer class="tfoot">
       <p class="thint" id="tHint"><svg class="ico"><use href="#i-book"/></svg> اقرأ الميثاق حتى النهاية لتفعيل الموافقة</p>
-      <label class="tchk" for="tc1"><input type="checkbox" id="tc1" disabled><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>قرأت ميثاق الاستخدام الرقمي وفهمت ما فيه، بما في ذلك الجرائم المعلوماتية وعقوباتها.</label>
+      <label class="tchk" for="tc1"><input type="checkbox" id="tc1" disabled><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>قرأت ميثاق الاستخدام الرقمي وفهمت ما فيه، بما في ذلك الجرائم المعلوماتية وعقوبتها.</label>
       <label class="tchk" for="tc2"><input type="checkbox" id="tc2" disabled><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>أوافق على شروط الاستخدام وأتعهّد بالالتزام بأخلاقيات التعامل الرقمي.</label>
       <p class="lerr" id="tErr" role="alert" hidden></p>
       <div class="tbtns">
@@ -843,7 +837,7 @@ body.locked{overflow:hidden}
     <p class="lsub">أهلاً بك من جديد، سجّل دخولك لمتابعة رحلتك في الوعي الرقمي</p>
     <label class="lf" for="lgUser"><span class="lic"><svg class="ico"><use href="#i-user"/></svg></span><input id="lgUser" type="text" placeholder="اسم المستخدم" autocomplete="username" spellcheck="false"></label>
     <label class="lf" for="lgPass"><span class="lic"><svg class="ico"><use href="#i-lock"/></svg></span><input id="lgPass" type="password" placeholder="كلمة المرور" autocomplete="current-password" inputmode="numeric"><button type="button" class="eye" id="lgEye" aria-label="إظهار كلمة المرور"><svg class="ico"><use href="#i-eye"/></svg></button></label>
-    <div class="lrow"><label class="rem" for="lgRem"><input type="checkbox" id="lgRem" checked><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>تذكّرني</label><span class="lsec"><svg class="ico"><use href="#i-shield"/></svg> اتصال آمن</span></div>
+    <div class="lrow"><span class="lsec" style="color:var(--gold-2)"><svg class="ico"><use href="#i-check"/></svg> وافقت على الميثاق</span><span class="lsec"><svg class="ico"><use href="#i-shield"/></svg> اتصال آمن</span></div>
     <p class="lerr" id="lgErr" role="alert" hidden></p>
     <button class="lbtn" type="submit"><span>دخول</span><svg class="ico flip"><use href="#i-send"/></svg></button>
     <p class="lfoot">منصة وسام للتوعية والحماية الرقمية</p>
@@ -1318,7 +1312,7 @@ go(location.hash.slice(1),false);
 const USER="فهد",PASS="8383";
 const norm=t=>String(t||"").trim().replace(/[ً-ْـ]/g,"");
 const toLatin=t=>String(t||"").replace(/[٠-٩]/g,d=>"٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g,d=>"۰۱۲۳۴۵۶۷۸۹".indexOf(d)).trim();
-let authed=false;try{authed=localStorage.getItem("wisam-auth")===USER||sessionStorage.getItem("wisam-auth")===USER}catch(e){}
+let authed=false;try{localStorage.removeItem("wisam-auth");sessionStorage.removeItem("wisam-auth")}catch(e){}
 function showLogin(){const L=$("#login");L.hidden=false;L.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{$("#lgUser").focus();loginNet.size();},50);}
 function enter(){const L=$("#login");L.classList.add("out");document.body.classList.remove("locked");setTimeout(()=>{L.hidden=true},650);
   $("#uName").textContent=USER;$("#uAv").textContent=USER[0];}
@@ -1327,16 +1321,16 @@ $("#lgEye").onclick=()=>{const p=$("#lgPass"),sh=p.type==="password";p.type=sh?"
 $("#lgForm").addEventListener("submit",e=>{e.preventDefault();const u=norm($("#lgUser").value),p=toLatin($("#lgPass").value),err=$("#lgErr"),card=$("#lgForm");
   if(!u||!p){err.textContent="اكتب اسم المستخدم وكلمة المرور.";err.hidden=false;return;}
   if(u===USER&&p===PASS){err.hidden=true;const btn=card.querySelector(".lbtn");btn.disabled=true;btn.querySelector("span").textContent="جاري الدخول…";
-    try{($("#lgRem").checked?localStorage:sessionStorage).setItem("wisam-auth",USER)}catch(_){}
+    authed=true;
     if(!S.acts.length||S.acts[0].text.indexOf("تسجيل الدخول")<0)act("user","تسجيل الدخول إلى المنصة");
     setTimeout(()=>{enter();btn.disabled=false;btn.querySelector("span").textContent="دخول";},700);}
   else{err.textContent="اسم المستخدم أو كلمة المرور غير صحيحة. حاول مرة أخرى.";err.hidden=false;card.classList.remove("shake");void card.offsetWidth;card.classList.add("shake");$("#lgPass").value="";$("#lgPass").focus();}});
-$("#logout").onclick=()=>{try{localStorage.removeItem("wisam-auth");sessionStorage.removeItem("wisam-auth")}catch(e){}$("#lgPass").value="";showLogin();};
+$("#logout").onclick=()=>{authed=false;termsOK=false;$("#lgPass").value="";$("#lgUser").value="";$("#login").hidden=true;showTerms();};
 
 
 /* ---------- Charter / terms ---------- */
 const TERMS_V="wisam-terms-v1";
-let termsOK=false;try{termsOK=localStorage.getItem(TERMS_V)==="yes"}catch(e){}
+let termsOK=false;try{localStorage.removeItem(TERMS_V)}catch(e){}
 const tBody=$("#tBody"),tc1=$("#tc1"),tc2=$("#tc2"),tYes=$("#tYes");
 function tUpdate(){tYes.disabled=!(tc1.checked&&tc2.checked);if(!tYes.disabled)$("#tErr").hidden=true;}
 function tScroll(){const max=tBody.scrollHeight-tBody.clientHeight;const p=max<=0?1:tBody.scrollTop/max;$("#tProg").style.width=Math.round(p*100)+"%";
@@ -1347,8 +1341,8 @@ tBody.addEventListener("scroll",tScroll,{passive:true});
 document.querySelectorAll(".tnav a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();const s=$("#"+a.dataset.t);tBody.scrollTo({top:s.offsetTop-tBody.offsetTop-6,behavior:"smooth"});}));
 tc1.addEventListener("change",tUpdate);tc2.addEventListener("change",tUpdate);
 $("#tNo").onclick=()=>{const e=$("#tErr");e.textContent="لا يمكن استخدام منصة وسام دون الموافقة على ميثاق الاستخدام الرقمي.";e.hidden=false;const c=$(".tcard");c.classList.remove("shake");void c.offsetWidth;c.classList.add("shake");};
-function showTerms(){const T=$("#terms");T.hidden=false;T.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{tBody.focus();tScroll();},60);}
-tYes.onclick=()=>{if(tYes.disabled)return;try{localStorage.setItem(TERMS_V,"yes")}catch(e){}termsOK=true;
+function showTerms(){tc1.checked=tc2.checked=false;tc1.disabled=tc2.disabled=true;tYes.disabled=true;$("#tEnd").classList.remove("on");const h=$("#tHint");h.classList.remove("done");h.innerHTML=ic("book")+" اقرأ الميثاق حتى النهاية لتفعيل الموافقة";$("#tErr").hidden=true;tBody.scrollTop=0;document.querySelectorAll(".tnav a").forEach(a=>a.classList.remove("read"));const T=$("#terms");T.hidden=false;T.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{tBody.focus();tScroll();},60);}
+tYes.onclick=()=>{if(tYes.disabled)return;termsOK=true;
   const T=$("#terms");T.classList.add("out");setTimeout(()=>{T.hidden=true;},600);
   if(!authed)showLogin();else{document.body.classList.remove("locked");}};
 
