@@ -324,7 +324,7 @@ footer .logo b{font-size:1.3rem}
 
 /* ===== Dashboard shell (mirrors the platform mockup) ===== */
 .shell{padding-block:18px 8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.grid3{max-width:1640px;margin:0 auto;display:grid;grid-template-columns:250px minmax(0,1fr) 400px;gap:16px;align-items:stretch}
+.grid3{max-width:1640px;margin:0 auto;display:grid;grid-template-columns:250px minmax(0,1fr) 420px;gap:16px;align-items:stretch}
 .grid3>*{min-width:0}
 @media (max-width:1240px){.grid3{grid-template-columns:minmax(0,1fr) 420px}.sright{grid-column:1/-1;order:3}}
 @media (max-width:920px){.grid3{grid-template-columns:1fr}.center{order:1}.sleft{order:2}.sright{order:3}}
@@ -397,10 +397,11 @@ footer .logo b{font-size:1.3rem}
 .apphead{text-align:center}
 .apphead h2{font-size:1.7rem}
 .apphead p{color:var(--mint);font-size:.9rem;margin-top:2px}
-.appbody{display:grid;grid-template-columns:minmax(0,1fr) 104px;gap:14px;margin-top:18px;align-items:center}
-@media (max-width:480px){.appbody{grid-template-columns:1fr}}
+.appbody{display:flex;flex-direction:column;align-items:center;gap:22px;margin-top:20px}
+.sleft .phone{width:100%;max-width:350px}
+
 .sleft .phone{border-radius:40px;padding:10px}
-.sleft .screen{border-radius:31px;height:620px;max-height:none;min-height:0}
+.sleft .screen{border-radius:31px;height:700px;max-height:none;min-height:0}
 .notch{justify-content:space-between;padding:0 18px;font-size:.7rem;color:var(--fg)}
 .notch i{margin-top:-10px}
 .ph-score{margin:10px 12px 0;padding:12px 14px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:10px;
@@ -410,10 +411,10 @@ footer .logo b{font-size:1.3rem}
 .ph-score span{font-size:.75rem;color:var(--muted)}
 .ph-score em{font-style:normal;font-family:var(--f-display);font-size:1.7rem;color:var(--fg);font-variant-numeric:tabular-nums}
 .ph-score svg{width:46px;height:52px;flex:none}
-.flist{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.flist{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 10px;width:100%}
 .flist li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;font-size:.8rem;line-height:1.4;color:var(--fg)}
 .flist li span{width:46px;height:46px;border-radius:14px;border:1px solid var(--line);display:grid;place-items:center;font-size:22px;color:var(--gold-2);background:rgba(214,178,98,.07)}
-@media (max-width:480px){.flist{grid-template-columns:repeat(3,1fr)}}
+
 /* poster band */
 .poster{padding-block:46px 10px}
 .poster .pillars{margin-top:0}
@@ -425,6 +426,9 @@ footer .logo b{font-size:1.3rem}
 .center .stat .n{font-size:1.7rem}
 .center .stat .lbl{white-space:nowrap}
 .path b{font-size:.95rem;line-height:1.4}
+.sleft .b{font-size:.98rem}
+.sleft .ph-head b{font-size:1.3rem}
+.sleft .comp textarea{font-size:1rem}
 </style>
 
 </head>
