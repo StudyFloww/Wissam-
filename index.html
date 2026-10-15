@@ -1339,7 +1339,8 @@ async function viaFree(msgs,{signal,onText}){
 function loadPuter(){if(window.puter)return Promise.resolve(window.puter);
   if(!loadPuter.p)loadPuter.p=new Promise((res,rej)=>{const sc=document.createElement("script");sc.src="https://js.puter.com/v2/";sc.onload=()=>window.puter?res(window.puter):rej();sc.onerror=()=>{loadPuter.p=null;rej()};document.head.appendChild(sc);setTimeout(()=>rej(),15000);});
   return loadPuter.p;}
-if(!window.claude)loadPuter().catch(()=>{});
+const canPuter=!window.claude&&/^https?:$/.test(location.protocol);
+if(canPuter)loadPuter().catch(()=>{});
 function pText(r){if(!r)return"";if(typeof r==="string")return r;if(typeof r.text==="string")return r.text;const c=r.message&&r.message.content;
   if(typeof c==="string")return c;if(Array.isArray(c))return c.map(x=>x&&(x.text||"")).join("");return String(r);}
 async function viaPuter(msgs,{signal,onText}){
@@ -1355,7 +1356,7 @@ async function callAI(msgs,opts){
   if(cs){try{return await cs([{role:"user",content:RULESPROMPT},...msgs],{cache:false,...opts});}
     catch(e){if(!["not_granted","sampling_disabled","not_declared","capability_disabled","capability_removed"].includes(e&&e.code))throw e;}}
   if(GEMINI_KEY)return viaGemini(msgs,opts);
-  if(!window.claude){try{return await viaPuter(msgs,opts);}catch(e){if(e&&e.code==="cancelled")throw e;}}
+  if(canPuter){try{return await viaPuter(msgs,opts);}catch(e){if(e&&e.code==="cancelled")throw e;}}
   return viaFree(msgs,opts);}
 
 function setBusy(v){busy=v;sendBtn.innerHTML=v?ic("stop"):'<svg class="ico flip"><use href="#i-send"/></svg>';sendBtn.setAttribute("aria-label",v?"إيقاف":"إرسال");}
