@@ -805,8 +805,7 @@ body.locked{overflow:hidden}
     <footer class="tfoot">
       <p class="thint" id="tHint"><svg class="ico"><use href="#i-book"/></svg> اقرأ الميثاق حتى النهاية لتفعيل الموافقة</p>
       <label class="tchk" for="tc1"><input type="checkbox" id="tc1" disabled><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>قرأت ميثاق الاستخدام الرقمي وفهمت ما فيه، بما في ذلك الجرائم المعلوماتية وعقوبتها.</label>
-      <label class="tchk" for="tc2"><input type="checkbox" id="tc2" disabled><span class="cb"><svg class="ico"><use href="#i-check"/></svg></span>أوافق على شروط الاستخدام وأتعهّد بالالتزام بأخلاقيات التعامل الرقمي.</label>
-      <p class="lerr" id="tErr" role="alert" hidden></p>
+            <p class="lerr" id="tErr" role="alert" hidden></p>
       <div class="tbtns">
         <button type="button" class="tno" id="tNo">لا أوافق</button>
         <button type="button" class="lbtn tyes" id="tYes" disabled><span>أوافق وأتابع</span><svg class="ico flip"><use href="#i-send"/></svg></button>
@@ -1331,17 +1330,17 @@ $("#logout").onclick=()=>{authed=false;termsOK=false;$("#lgPass").value="";$("#l
 /* ---------- Charter / terms ---------- */
 const TERMS_V="wisam-terms-v1";
 let termsOK=false;try{localStorage.removeItem(TERMS_V)}catch(e){}
-const tBody=$("#tBody"),tc1=$("#tc1"),tc2=$("#tc2"),tYes=$("#tYes");
-function tUpdate(){tYes.disabled=!(tc1.checked&&tc2.checked);if(!tYes.disabled)$("#tErr").hidden=true;}
+const tBody=$("#tBody"),tc1=$("#tc1"),tYes=$("#tYes");
+function tUpdate(){tYes.disabled=!(tc1.checked);if(!tYes.disabled)$("#tErr").hidden=true;}
 function tScroll(){const max=tBody.scrollHeight-tBody.clientHeight;const p=max<=0?1:tBody.scrollTop/max;$("#tProg").style.width=Math.round(p*100)+"%";
   let cur="t1";document.querySelectorAll(".tsec").forEach(sec=>{if(sec.offsetTop-tBody.offsetTop-80<=tBody.scrollTop)cur=sec.id;});
   document.querySelectorAll(".tnav a").forEach(a=>{a.classList.toggle("on",a.dataset.t===cur);const s=$("#"+a.dataset.t);if(s.offsetTop-tBody.offsetTop<=tBody.scrollTop+tBody.clientHeight-60)a.classList.add("read");});
-  if(p>.97&&tc1.disabled){tc1.disabled=false;tc2.disabled=false;$("#tEnd").classList.add("on");const h=$("#tHint");h.classList.add("done");h.innerHTML=ic("check")+" أحسنت، قرأت الميثاق كاملاً. وافق الآن للمتابعة";}}
+  if(p>.97&&tc1.disabled){tc1.disabled=false;$("#tEnd").classList.add("on");const h=$("#tHint");h.classList.add("done");h.innerHTML=ic("check")+" أحسنت، قرأت الميثاق كاملاً. وافق الآن للمتابعة";}}
 tBody.addEventListener("scroll",tScroll,{passive:true});
 document.querySelectorAll(".tnav a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();const s=$("#"+a.dataset.t);tBody.scrollTo({top:s.offsetTop-tBody.offsetTop-6,behavior:"smooth"});}));
-tc1.addEventListener("change",tUpdate);tc2.addEventListener("change",tUpdate);
+tc1.addEventListener("change",tUpdate);
 $("#tNo").onclick=()=>{const e=$("#tErr");e.textContent="لا يمكن استخدام منصة وسام دون الموافقة على ميثاق الاستخدام الرقمي.";e.hidden=false;const c=$(".tcard");c.classList.remove("shake");void c.offsetWidth;c.classList.add("shake");};
-function showTerms(){tc1.checked=tc2.checked=false;tc1.disabled=tc2.disabled=true;tYes.disabled=true;$("#tEnd").classList.remove("on");const h=$("#tHint");h.classList.remove("done");h.innerHTML=ic("book")+" اقرأ الميثاق حتى النهاية لتفعيل الموافقة";$("#tErr").hidden=true;tBody.scrollTop=0;document.querySelectorAll(".tnav a").forEach(a=>a.classList.remove("read"));const T=$("#terms");T.hidden=false;T.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{tBody.focus();tScroll();},60);}
+function showTerms(){tc1.checked=false;tc1.disabled=true;tYes.disabled=true;$("#tEnd").classList.remove("on");const h=$("#tHint");h.classList.remove("done");h.innerHTML=ic("book")+" اقرأ الميثاق حتى النهاية لتفعيل الموافقة";$("#tErr").hidden=true;tBody.scrollTop=0;document.querySelectorAll(".tnav a").forEach(a=>a.classList.remove("read"));const T=$("#terms");T.hidden=false;T.classList.remove("out");document.body.classList.add("locked");setTimeout(()=>{tBody.focus();tScroll();},60);}
 tYes.onclick=()=>{if(tYes.disabled)return;termsOK=true;
   const T=$("#terms");T.classList.add("out");setTimeout(()=>{T.hidden=true;},600);
   if(!authed)showLogin();else{document.body.classList.remove("locked");}};
